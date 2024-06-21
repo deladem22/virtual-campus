@@ -5,7 +5,7 @@ function KnustLoginDirection() {
 			<a
 				className="underline text-red-500 dark:text-red-400"
 				target="_blank"
-				href="https://outlook.com/login"
+				href="https://outlook.com/login"  //will change to prefiere mail eg gmail/outlook
 				rel="noreferrer"
 			>
 				outlook.com/login
