@@ -1,5 +1,5 @@
 import { ActionFunctionArgs, redirect } from "@remix-run/node";
-import { prisma } from "~/lib/prisma.server";
+import { prisma } from "../lib/prisma.server";
 
 export const loader = async ({ request }: ActionFunctionArgs) => {
 	const searchParams = new URL(request.url).searchParams;

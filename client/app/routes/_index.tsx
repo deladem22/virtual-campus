@@ -1,5 +1,5 @@
 import { LoaderFunctionArgs, redirect } from "@remix-run/node";
-import { userPrefs } from "~/lib/cookies.server";
+import { userPrefs } from "../lib/cookies.server";
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
 	const cookies: Record<string, string> =

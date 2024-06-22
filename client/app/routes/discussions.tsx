@@ -13,19 +13,19 @@ import {
 } from "@remix-run/react";
 import qs from "qs";
 import React from "react";
-import { DiscussionsEmpty } from "~/components/discussions-empty";
-import { PostInput } from "~/components/post-input";
-import { PostItem, type PostItemProps } from "~/components/post-item";
-import { TagsFilter } from "~/components/tags-filter";
-import { checkAuth } from "~/lib/check-auth";
-import { createPost } from "~/lib/create-post";
-import { createTagsQuery } from "~/lib/create-tags-query";
-import { includeVotes } from "~/lib/include-votes";
-import { prisma } from "~/lib/prisma.server";
-import { renderSummary } from "~/lib/render-summary.server";
-import { values } from "~/lib/values.server";
-import { withUserPrefs } from "~/lib/with-user-prefs";
-import type { loader as rootLoader } from "~/root";
+import { DiscussionsEmpty } from "../components/discussions-empty";
+import { PostInput } from "../components/post-input";
+import { PostItem, type PostItemProps } from "../components/post-item";
+import { TagsFilter } from "../components/tags-filter";
+import { checkAuth } from "../lib/check-auth";
+import { createPost } from "../lib/create-post";
+import { createTagsQuery } from "../lib/create-tags-query";
+import { includeVotes } from "../lib/include-votes";
+import { prisma } from "../lib/prisma.server";
+import { renderSummary } from "../lib/render-summary.server";
+import { values } from "../lib/values.server";
+import { withUserPrefs } from "../lib/with-user-prefs";
+import type { loader as rootLoader } from "../root";
 
 const PAGE_SIZE = 50;
 

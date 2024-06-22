@@ -1,5 +1,5 @@
 import { LoaderFunctionArgs, json } from "@remix-run/node";
-import { prisma } from "~/lib/prisma.server";
+import { prisma } from "../lib/prisma.server";
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
 	const post = new URL(request.url).searchParams.get("postId");

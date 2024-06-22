@@ -7,15 +7,15 @@ import {
 } from "@remix-run/node";
 import { useLoaderData, useRouteLoaderData, useSubmit } from "@remix-run/react";
 import dayjs from "dayjs";
-import { Anchor } from "~/components/anchor";
-import { Button } from "~/components/button";
-import { PostTime } from "~/components/post-time";
-import { Username } from "~/components/username";
-import { checkAuth } from "~/lib/check-auth";
-import { prisma } from "~/lib/prisma.server";
-import { timeToString } from "~/lib/time";
-import { values } from "~/lib/values.server";
-import type { loader as rootLoader } from "~/root";
+import { Anchor } from "../components/anchor";
+import { Button } from "../components/button";
+import { PostTime } from "../components/post-time";
+import { Username } from "../components/username";
+import { checkAuth } from "../lib/check-auth";
+import { prisma } from "../lib/prisma.server";
+import { timeToString } from "../lib/time";
+import { values } from "../lib/values.server";
+import type { loader as rootLoader } from "../root";
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {
 	const eventId = Number(params.id);

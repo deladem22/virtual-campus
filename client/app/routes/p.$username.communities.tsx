@@ -9,12 +9,12 @@ import {
 	useParams,
 	useRouteLoaderData,
 } from "@remix-run/react";
-import { Avatar } from "~/components/avatar";
-import { ellipsize } from "~/lib/ellipsize";
-import { prisma } from "~/lib/prisma.server";
-import { notFound } from "~/lib/responses";
-import { values } from "~/lib/values.server";
-import type { loader as rootLoader } from "~/root";
+import { Avatar } from "../components/avatar";
+import { ellipsize } from "../lib/ellipsize";
+import { prisma } from "../lib/prisma.server";
+import { notFound } from "../lib/responses";
+import { values } from "../lib/values.server";
+import type { loader as rootLoader } from "../root";
 
 export const loader = async ({ request, params }: LoaderFunctionArgs) => {
 	const user = await prisma.user.findFirst({

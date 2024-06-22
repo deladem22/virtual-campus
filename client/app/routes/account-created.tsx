@@ -1,7 +1,7 @@
 import type { LoaderFunctionArgs, MetaFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
-import { KnustLoginDirection } from "~/components/knust-login-direction";
-import { values } from "~/lib/values.server";
+import { KnustLoginDirection } from "../components/knust-login-direction";
+import { values } from "../lib/values.server";
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
 	const school = values.get("id") as string;

@@ -1,7 +1,7 @@
 import type { ActionFunctionArgs } from "@remix-run/node";
-import { checkAuth } from "~/lib/check-auth";
-import { prisma } from "~/lib/prisma.server";
-import { timeFromString } from "~/lib/time";
+import { checkAuth } from "../lib/check-auth";
+import { prisma } from "../lib/prisma.server";
+import { timeFromString } from "../lib/time";
 
 export const action = async ({ request, params }: ActionFunctionArgs) => {
 	if (!["PATCH", "DELETE"].includes(request.method)) {

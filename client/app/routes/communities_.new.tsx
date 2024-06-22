@@ -6,14 +6,14 @@ import {
 } from "@remix-run/node";
 import { useFetcher } from "@remix-run/react";
 import { FieldValues, useForm } from "react-hook-form";
-import { Button } from "~/components/button";
-import { Input } from "~/components/input";
-import { Textarea } from "~/components/textarea";
-import { checkAuth } from "~/lib/check-auth";
-import { getModerators } from "~/lib/get-moderators";
-import { prisma } from "~/lib/prisma.server";
-import { USERNAME_REGEX } from "~/lib/username-regex";
-import { values } from "~/lib/values.server";
+import { Button } from "../components/button";
+import { Input } from "../components/input";
+import { Textarea } from "../components/textarea";
+import { checkAuth } from "../lib/check-auth";
+import { getModerators } from "../lib/get-moderators";
+import { prisma } from "../lib/prisma.server";
+import { USERNAME_REGEX } from "../lib/username-regex";
+import { values } from "../lib/values.server";
 
 export const loader = async () => {
 	return json({ school: values.meta() });

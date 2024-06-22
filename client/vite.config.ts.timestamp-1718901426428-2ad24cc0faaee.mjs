@@ -8,7 +8,7 @@ var vite_config_default = defineConfig({
   plugins: [remix(), UnoCSS()],
   resolve: {
     alias: {
-      "~": "/app"
+      "..": "/app"
     }
   },
   server: { port: 3e3 },

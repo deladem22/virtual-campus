@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useRouteLoaderData } from "@remix-run/react";
 import React from "react";
 import type { loader as rootLoader } from "../root";

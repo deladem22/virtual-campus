@@ -14,10 +14,10 @@ import {
 } from "@remix-run/react";
 import dayjs from "dayjs";
 import { useForm, type FieldValues } from "react-hook-form";
-import { Button } from "~/components/button";
-import { Input } from "~/components/input";
-import { hash } from "~/lib/password.server";
-import { prisma } from "~/lib/prisma.server";
+import { Button } from "../components/button";
+import { Input } from "../components/input";
+import { hash } from "../lib/password.server";
+import { prisma } from "../lib/prisma.server";
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
 	const email = new URL(request.url).searchParams.get("email");

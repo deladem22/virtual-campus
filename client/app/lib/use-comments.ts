@@ -1,7 +1,7 @@
 import { Prisma } from "@prisma/client";
 import { useFetcher } from "@remix-run/react";
 import React from "react";
-import { loader } from "~/routes/comments";
+import { loader } from "../routes/comments";
 
 interface Args {
 	postId: number;

@@ -1,6 +1,6 @@
 import { LoaderFunctionArgs, json, redirect } from "@remix-run/node";
-import { checkAuth } from "~/lib/check-auth";
-import { prisma } from "~/lib/prisma.server";
+import { checkAuth } from "../lib/check-auth";
+import { prisma } from "../lib/prisma.server";
 
 export const loader = async ({ request, params }: LoaderFunctionArgs) => {
 	const userId = await checkAuth(request);

@@ -2,7 +2,7 @@ import { Course } from "@prisma/client";
 import { useFetcher } from "@remix-run/react";
 import React from "react";
 import { RequestStatus } from "./request-status";
-import { loader as coursesLoader } from "~/routes/courses";
+import { loader as coursesLoader } from "../routes/courses";
 
 const cache: Course[] = [];
 function useCourses() {

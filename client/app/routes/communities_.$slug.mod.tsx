@@ -1,6 +1,6 @@
 import { ActionFunctionArgs, json } from "@remix-run/node";
-import { checkMod } from "~/lib/check-mod";
-import { prisma } from "~/lib/prisma.server";
+import { checkMod } from "../lib/check-mod";
+import { prisma } from "../lib/prisma.server";
 
 export const action = async ({ request, params }: ActionFunctionArgs) => {
 	if (request.method !== "POST") {

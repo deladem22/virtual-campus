@@ -8,20 +8,20 @@ import {
 } from "@remix-run/node";
 import { Link, useLoaderData, useRouteLoaderData } from "@remix-run/react";
 import React from "react";
-import { Avatar } from "~/components/avatar";
-import { LoginComment } from "~/components/login-comment";
-import { PostContent } from "~/components/post-content";
-import { PostInput } from "~/components/post-input";
-import { PostItem, type PostItemProps } from "~/components/post-item";
-import { PostPeople } from "~/components/post-people";
-import { checkAuth } from "~/lib/check-auth";
-import { createPost } from "~/lib/create-post";
-import { createPostNotification } from "~/lib/create-post-notification";
-import { includeVotes } from "~/lib/include-votes";
-import { prisma } from "~/lib/prisma.server";
-import { render } from "~/lib/render.server";
-import { values } from "~/lib/values.server";
-import type { loader as rootLoader } from "~/root";
+import { Avatar } from "../components/avatar";
+import { LoginComment } from "../components/login-comment";
+import { PostContent } from "../components/post-content";
+import { PostInput } from "../components/post-input";
+import { PostItem, type PostItemProps } from "../components/post-item";
+import { PostPeople } from "../components/post-people";
+import { checkAuth } from "../lib/check-auth";
+import { createPost } from "../lib/create-post";
+import { createPostNotification } from "../lib/create-post-notification";
+import { includeVotes } from "../lib/include-votes";
+import { prisma } from "../lib/prisma.server";
+import { render } from "../lib/render.server";
+import { values } from "../lib/values.server";
+import type { loader as rootLoader } from "../root";
 
 export const loader = async ({ request, params }: LoaderFunctionArgs) => {
 	const postId = Number(params.id as string);

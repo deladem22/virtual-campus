@@ -1,4 +1,4 @@
-import { Anchor } from "~/components/anchor";
+import { Anchor } from "../components/anchor";
 
 export default function CommunityCreated() {
 	return (

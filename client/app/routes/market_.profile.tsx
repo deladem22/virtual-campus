@@ -7,11 +7,11 @@ import {
 } from "@remix-run/node";
 import { useFetcher, useLoaderData } from "@remix-run/react";
 import { FieldValues, useForm } from "react-hook-form";
-import { Button } from "~/components/button";
-import { Input } from "~/components/input";
-import { checkAuth } from "~/lib/check-auth";
-import { prisma } from "~/lib/prisma.server";
-import { values } from "~/lib/values.server";
+import { Button } from "../components/button";
+import { Input } from "../components/input";
+import { checkAuth } from "../lib/check-auth";
+import { prisma } from "../lib/prisma.server";
+import { values } from "../lib/values.server";
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
 	const userId = await checkAuth(request);

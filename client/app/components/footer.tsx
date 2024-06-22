@@ -32,21 +32,21 @@ function Footer() {
 
 			<div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
 				<div className="col-span-2 lg:col-span-1">
-					<div className="font-bold">COMPA</div>
+					<div className="font-bold">Virtual Campus</div>
 
 					<div className="text-secondary mb-2">
-						An open initiative to promote collaboration and knowledge sharing
+						Virtual Campus is An open initiative to promote collaboration and knowledge sharing
 						among students of higher education.
 					</div>
 
 					<div className="flex gap-4 flex-wrap">
-						<a
+						{/* <a
 							className="inline-flex shrink-0 items-center rounded-lg gap-2 px-2 py-1 bg-zinc-200 dark:bg-neutral-700 dark:bg-opacity-50 font-medium"
 							href="https://github.com/blackmann/compa"
 						>
 							<div className="i-lucide-github" />
 							Source code
-						</a>
+						</a> */}
 
 						<div className="flex gap-2 items-center text-secondary shrink-0">
 							<div className="size-2 rounded-full bg-green-500" />

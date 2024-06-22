@@ -16,31 +16,31 @@ import clsx from "clsx";
 import qs from "qs";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { Button } from "~/components/button";
-import { FileInput } from "~/components/file-input";
-import { FileMenu } from "~/components/file-menu";
-import { FileSelectItem } from "~/components/file-select-item";
-import { Input } from "~/components/input";
-import { Thumbnail } from "~/components/media-item";
-import { PostTime } from "~/components/post-time";
+import { Button } from "../components/button";
+import { FileInput } from "../components/file-input";
+import { FileMenu } from "../components/file-menu";
+import { FileSelectItem } from "../components/file-select-item";
+import { Input } from "../components/input";
+import { Thumbnail } from "../components/media-item";
+import { PostTime } from "../components/post-time";
 import {
 	DEFAULT_SELECTIONS,
 	TagInput,
 	stringifySelections,
 	type SelectionId,
 	type Selections,
-} from "~/components/tag-input";
-import { TagSelect } from "~/components/tag-select";
-import { Tags } from "~/components/tags";
-import { TagsFilter } from "~/components/tags-filter";
-import { Username } from "~/components/username";
-import { checkAuth } from "~/lib/check-auth";
-import { createTagsQuery } from "~/lib/create-tags-query";
-import { ellipsizeFilename, humanizeSize } from "~/lib/files";
-import { prisma } from "~/lib/prisma.server";
-import { uploadMedia } from "~/lib/upload-media";
-import { values } from "~/lib/values.server";
-import type { loader as rootLoader } from "~/root";
+} from "../components/tag-input";
+import { TagSelect } from "../components/tag-select";
+import { Tags } from "../components/tags";
+import { TagsFilter } from "../components/tags-filter";
+import { Username } from "../components/username";
+import { checkAuth } from "../lib/check-auth";
+import { createTagsQuery } from "../lib/create-tags-query";
+import { ellipsizeFilename, humanizeSize } from "../lib/files";
+import { prisma } from "../lib/prisma.server";
+import { uploadMedia } from "../lib/upload-media";
+import { values } from "../lib/values.server";
+import type { loader as rootLoader } from "../root";
 
 const FILE_SIZE_LIMIT = 5 * 1024 * 1024;
 

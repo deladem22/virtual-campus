@@ -4,12 +4,12 @@ import clsx from "clsx";
 import dayjs from "dayjs";
 import React from "react";
 import { FieldValues, useForm } from "react-hook-form";
-import { Button } from "~/components/button";
-import { FileInput } from "~/components/file-input";
-import { Input } from "~/components/input";
-import { Textarea } from "~/components/textarea";
-import { timeFromString } from "~/lib/time";
-import { uploadMedia } from "~/lib/upload-media";
+import { Button } from "../components/button";
+import { FileInput } from "../components/file-input";
+import { Input } from "../components/input";
+import { Textarea } from "../components/textarea";
+import { timeFromString } from "../lib/time";
+import { uploadMedia } from "../lib/upload-media";
 
 export const meta: MetaFunction = () => {
 	return [{ title: "Add Event ✽ compa" }];

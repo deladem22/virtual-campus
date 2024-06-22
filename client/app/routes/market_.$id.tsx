@@ -11,14 +11,14 @@ import {
 	useLoaderData,
 	useRouteLoaderData,
 } from "@remix-run/react";
-import { Anchor } from "~/components/anchor";
-import { Button } from "~/components/button";
-import { Username } from "~/components/username";
-import { checkAuth } from "~/lib/check-auth";
-import { prisma } from "~/lib/prisma.server";
-import { methodNotAllowed, notFound } from "~/lib/responses";
-import { values } from "~/lib/values.server";
-import type { loader as rootLoader } from "~/root";
+import { Anchor } from "../components/anchor";
+import { Button } from "../components/button";
+import { Username } from "../components/username";
+import { checkAuth } from "../lib/check-auth";
+import { prisma } from "../lib/prisma.server";
+import { methodNotAllowed, notFound } from "../lib/responses";
+import { values } from "../lib/values.server";
+import type { loader as rootLoader } from "../root";
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {
 	const product = await prisma.product.findFirst({

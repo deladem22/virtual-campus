@@ -1,6 +1,6 @@
 import { Link, useParams } from "@remix-run/react";
 import clsx from "clsx";
-import { days } from "~/lib/days";
+import { days } from "../lib/days";
 
 interface Props {
 	className?: string;

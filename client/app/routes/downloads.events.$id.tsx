@@ -1,9 +1,9 @@
 import { LoaderFunctionArgs } from "@remix-run/node";
-import { prisma } from "~/lib/prisma.server";
+import { prisma } from "../lib/prisma.server";
 import ics from "ics";
 import dayjs from "dayjs";
-import { values } from "~/lib/values.server";
-import { slugify } from "~/lib/slugify";
+import { values } from "../lib/values.server";
+import { slugify } from "../lib/slugify";
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {
 	const event = await prisma.eventItem.findFirstOrThrow({

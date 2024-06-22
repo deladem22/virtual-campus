@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import {
 	json,
 	type ActionFunctionArgs,
@@ -8,15 +9,15 @@ import { Link, Outlet, useLoaderData, useOutlet } from "@remix-run/react";
 import clsx from "clsx";
 import posthog from "posthog-js";
 import React from "react";
-import { DaysHeader } from "~/components/days-header";
-import { LessonItem } from "~/components/lesson-item";
-import { TimetableFilter } from "~/components/timetable-filter";
-import { TimetableSaveToCalender } from "~/components/timetable-save-to-calendar";
-import { checkAuth } from "~/lib/check-auth";
-import { prisma } from "~/lib/prisma.server";
-import { timeFromString } from "~/lib/time";
-import { values } from "~/lib/values.server";
-import { withUserPrefs } from "~/lib/with-user-prefs";
+import { DaysHeader } from "../components/days-header";
+import { LessonItem } from "../components/lesson-item";
+import { TimetableFilter } from "../components/timetable-filter";
+import { TimetableSaveToCalender } from "../components/timetable-save-to-calendar";
+import { checkAuth } from "../lib/check-auth";
+import { prisma } from "../lib/prisma.server";
+import { timeFromString } from "../lib/time";
+import { values } from "../lib/values.server";
+import { withUserPrefs } from "../lib/with-user-prefs";
 
 export const loader = async ({ params, request }: LoaderFunctionArgs) => {
 	const { year, programme, level, sem, day: _day } = params;

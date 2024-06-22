@@ -36,8 +36,8 @@ async function sendEmail(verification: EmailVerificationRequest) {
 
 	return await send({
 		to: verification.email,
-		from: "m@compa.so",
-		subject: "Account verification ✽ compa",
+		from: 'GTU <onboarding@resend.dev>',
+		subject: "Account verification ✽ Virtual Campus",
 		text: `Hi and welcome to compa,\n\nClick the following link to verify your account: ${link}.\n\nSee you!\n\n\n(You cannot reply to this email.)`,
 	});
 }

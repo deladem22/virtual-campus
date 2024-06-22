@@ -1,4 +1,4 @@
-import { ellipsizeFilename, humanizeSize } from "~/lib/files";
+import { ellipsizeFilename, humanizeSize } from "../lib/files";
 import { AudioItem } from "./audio-item";
 import { FileThumbnail } from "./non-image-thumb";
 

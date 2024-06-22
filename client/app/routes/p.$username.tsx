@@ -18,20 +18,20 @@ import parse from "html-react-parser";
 import React from "react";
 import { useForm, type FieldValues } from "react-hook-form";
 import type { Jsonify } from "type-fest";
-import { Avatar } from "~/components/avatar";
-import { Button } from "~/components/button";
-import { Modal } from "~/components/modal";
-import { PostItem, type PostItemProps } from "~/components/post-item";
-import { PostTime } from "~/components/post-time";
-import { Textarea } from "~/components/textarea";
-import { Username } from "~/components/username";
-import { checkAuth } from "~/lib/check-auth";
-import { prisma } from "~/lib/prisma.server";
-import { renderBio } from "~/lib/render-bio.server";
-import { renderSummary } from "~/lib/render-summary.server";
-import { notFound } from "~/lib/responses";
-import { values } from "~/lib/values.server";
-import type { loader as rootLoader } from "~/root";
+import { Avatar } from "../components/avatar";
+import { Button } from "../components/button";
+import { Modal } from "../components/modal";
+import { PostItem, type PostItemProps } from "../components/post-item";
+import { PostTime } from "../components/post-time";
+import { Textarea } from "../components/textarea";
+import { Username } from "../components/username";
+import { checkAuth } from "../lib/check-auth";
+import { prisma } from "../lib/prisma.server";
+import { renderBio } from "../lib/render-bio.server";
+import { renderSummary } from "../lib/render-summary.server";
+import { notFound } from "../lib/responses";
+import { values } from "../lib/values.server";
+import type { loader as rootLoader } from "../root";
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {
 	const user = await prisma.user.findFirst({

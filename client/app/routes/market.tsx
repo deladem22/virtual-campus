@@ -1,14 +1,14 @@
 import type { User } from "@prisma/client";
 import type { LoaderFunctionArgs, MetaFunction } from "@remix-run/node";
 import { useLoaderData, useRouteLoaderData } from "@remix-run/react";
-import { Anchor } from "~/components/anchor";
-import { Input } from "~/components/input";
-import { ProductItem } from "~/components/product-item";
-import { Select } from "~/components/select";
-import { checkAuth } from "~/lib/check-auth";
-import { prisma } from "~/lib/prisma.server";
-import { values } from "~/lib/values.server";
-import type { loader as rootLoader } from "~/root";
+import { Anchor } from "../components/anchor";
+import { Input } from "../components/input";
+import { ProductItem } from "../components/product-item";
+import { Select } from "../components/select";
+import { checkAuth } from "../lib/check-auth";
+import { prisma } from "../lib/prisma.server";
+import { values } from "../lib/values.server";
+import type { loader as rootLoader } from "../root";
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
 	let user: User | null = null;

@@ -1,13 +1,14 @@
+/* eslint-disable react/no-unescaped-entities */
 import { json, type MetaFunction } from "@remix-run/node";
 import { useLoaderData, useRouteLoaderData } from "@remix-run/react";
-import { Anchor } from "~/components/anchor";
-import { Button } from "~/components/button";
-import { ParlonLogo } from "~/components/parlon-logo";
-import { PeerVideoPanel } from "~/components/peer-video-panel";
-import { SelfVideoPanel } from "~/components/self-video-panel";
-import { ParlonProvider, useParlon } from "~/lib/parlon-context";
-import { values } from "~/lib/values.server";
-import type { loader as rootLoader } from "~/root";
+import { Anchor } from "../components/anchor";
+import { Button } from "../components/button";
+import { ParlonLogo } from "../components/parlon-logo";
+import { PeerVideoPanel } from "../components/peer-video-panel";
+import { SelfVideoPanel } from "../components/self-video-panel";
+import { ParlonProvider, useParlon } from "../lib/parlon-context";
+import { values } from "../lib/values.server";
+import type { loader as rootLoader } from "../root";
 
 export const loader = async () => {
 	return json({

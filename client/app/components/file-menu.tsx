@@ -1,7 +1,7 @@
 import type { Prisma } from "@prisma/client";
 import { useFetcher, useRouteLoaderData } from "@remix-run/react";
 import type { Jsonify } from "type-fest";
-import type { loader } from "~/root";
+import type { loader } from "../root";
 import { DropdownMenu } from "./dropdown-menu";
 
 type RepositoryFile = Prisma.RepositoryGetPayload<{ include: { user: true } }>;

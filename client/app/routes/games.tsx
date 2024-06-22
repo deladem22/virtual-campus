@@ -1,5 +1,5 @@
 import { json, type MetaFunction } from "@remix-run/node";
-import { values } from "~/lib/values.server";
+import { values } from "../lib/values.server";
 
 export const loader = async () => {
 	return json({ school: values.meta() });
