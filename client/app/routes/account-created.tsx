@@ -9,7 +9,7 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
 };
 
 export const meta: MetaFunction = () => {
-	return [{ title: "Account Created ✽ compa" }];
+	return [{ title: "Account Created ✽ Virtual-Campus" }];
 };
 
 export default function AccountCreated() {
@@ -26,7 +26,7 @@ export default function AccountCreated() {
 					</span>
 				</p>
 				<p className="mt-2">
-					You may not be able to add or edit content on compa until you verify
+					You may not be able to add or edit content on Virtual-Campus until you verify
 					your account.
 				</p>
 
@@ -36,7 +36,7 @@ export default function AccountCreated() {
 					<a
 						className="underline"
 						target="_blank"
-						href="https://wa.me/233247812093"
+						href="https://wa.me/233209792039"
 						rel="noreferrer"
 					>
 						Click here

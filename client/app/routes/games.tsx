@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { json, type MetaFunction } from "@remix-run/node";
 import { values } from "../lib/values.server";
 

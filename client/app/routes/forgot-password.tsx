@@ -101,7 +101,7 @@ export default function ForgotPassword() {
 									Reset link has been sent to your email.
 								</div>
 
-								{school.id === "knust" && <KnustLoginDirection />}
+								{school.id === "gctu" && <KnustLoginDirection />}
 							</>
 						) : (
 							<>

@@ -3,23 +3,23 @@ import { SymOutline } from "./sym-outline";
 const projectLinks = [
 	{
 		name: "About",
-		href: "https://compa.so",
+		href: "",
 	},
 	{
 		name: "Report an issue",
-		href: "https://github.com/blackmann/compa/issues",
+		href: "",
 	},
 	{
 		name: "Contribute",
-		href: "https://compa.so/contribute",
+		href: "",
 	},
 	{
 		name: "Roadmap",
-		href: "https://compa.so/roadmap",
+		href: "",
 	},
 	{
 		name: "Data & Privacy Policy",
-		href: "https://compa.so/data-privacy-policy",
+		href: "",
 	},
 ];
 
@@ -36,17 +36,11 @@ function Footer() {
 
 					<div className="text-secondary mb-2">
 						Virtual Campus is An open initiative to promote collaboration and knowledge sharing
-						among students of higher education.
+						among students of Ghana Communication Technology University (GCTU). 
 					</div>
 
 					<div className="flex gap-4 flex-wrap">
-						{/* <a
-							className="inline-flex shrink-0 items-center rounded-lg gap-2 px-2 py-1 bg-zinc-200 dark:bg-neutral-700 dark:bg-opacity-50 font-medium"
-							href="https://github.com/blackmann/compa"
-						>
-							<div className="i-lucide-github" />
-							Source code
-						</a> */}
+						
 
 						<div className="flex gap-2 items-center text-secondary shrink-0">
 							<div className="size-2 rounded-full bg-green-500" />

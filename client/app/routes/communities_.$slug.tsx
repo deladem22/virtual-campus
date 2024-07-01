@@ -66,7 +66,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
 
 	return [
 		{
-			title: `${data.community.name} (+${data.community.handle}) | ${data.school.shortName} ✽ compa`,
+			title: `${data.community.name} (+${data.community.handle}) | ${data.school.shortName} ✽ Virtual-Campus`,
 		},
 		{ name: "description", content: data.community.description },
 	];

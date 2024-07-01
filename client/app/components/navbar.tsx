@@ -64,7 +64,7 @@ function Navbar() {
 					<div>
 						<div className="flex gap-4 items-center">
 							<Link className="block shrink-0" to="/">
-								<img src="/sym.svg" width={32} className="inline" alt="Compa" />
+								<img src="/sym.svg" width={32} className="inline" alt="virtual-campus" />
 							</Link>
 						</div>
 					</div>

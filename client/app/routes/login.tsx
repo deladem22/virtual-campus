@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable react/no-unescaped-entities */
 import {
 	json,
 	type ActionFunctionArgs,
@@ -183,7 +185,7 @@ export default function Login() {
 							>
 								Create an account
 							</Link>{" "}
-							to start interacting on compa.
+							to start interacting on virtual-campus.
 						</p>
 					</form>
 				</div>

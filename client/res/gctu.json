@@ -1,0 +1,15 @@
+{
+	"id": "gctu",
+	"name": "Ghana Communication Technology University",
+	"shortName": "GCTU",
+	"semester": {
+		"number": 2,
+		"start": "2024-05-11",
+		"end": "2024-08-24"
+	},
+	"examination": {
+		"start": "2024-08-05",
+		"end": "2024-08-23"
+	},
+	"emailExtensions": ["gctu.edu.gh"]
+}

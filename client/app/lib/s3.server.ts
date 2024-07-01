@@ -16,7 +16,7 @@ const s3 = new S3Client({
 	region: process.env.AWS_REGION as string,
 });
 
-const DIR = process.env.AWS_BUCKET_DIR || 'gtu'
+const DIR = process.env.AWS_BUCKET_DIR || 'gctu-dir'
 
 async function upload(
 	stream: AsyncIterable<Uint8Array> | Buffer,
