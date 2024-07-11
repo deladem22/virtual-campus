@@ -13,13 +13,13 @@ import type { loader as rootLoader } from "../root";
 export const loader = async () => {
 	return json({
 		school: values.meta(),
-		available: values.get("id") === "knust",
+		available: values.get("id") === "gctu",
 	});
 };
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
 	return [
-		{ title: `Parlon | ${data?.school.shortName} | compa` },
+		{ title: `Parlon | ${data?.school.shortName} | gctuvc` },
 		{
 			name: "description",
 			content: "Make friends, find love, learn from random people on campus",

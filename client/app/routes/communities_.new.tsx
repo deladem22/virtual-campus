@@ -58,7 +58,7 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
 	return [
-		{ title: `Start a Community | ${data?.school.shortName} ✽ compa` },
+		{ title: `Start a Community | ${data?.school.shortName} ✽ gctuvc` },
 		{ name: "description", content: "Put people together and make wonders" },
 	];
 };

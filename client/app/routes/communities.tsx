@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import {
 	Link,
 	json,
@@ -23,7 +24,7 @@ export const loader = async () => {
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
 	return [
-		{ title: `Communities | ${data?.school.shortName} ✽ compa` },
+		{ title: `Communities | ${data?.school.shortName} ✽ gctuvc` },
 		{
 			name: "description",
 			content:

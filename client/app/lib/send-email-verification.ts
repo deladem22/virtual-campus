@@ -24,21 +24,21 @@ async function sendEmailVerification(email: string) {
 }
 
 async function sendEmail(verification: EmailVerificationRequest) {
-	const subdomain = process.env.SCHOOL;
+	// const subdomain = process.env.SCHOOL;
 	const { email, token } = verification;
 
 	const link = [
 		// will change after domain and hosting is bought
-		`https://${subdomain}.compa.so/verify-email/?`,
+		`https://gctuvc.com/verify-email/?`,  //omit subdomain for now
 		`email=${email}`,
 		`&token=${token}`,
 	].join("");
 
 	return await send({
 		to: verification.email,
-		from: 'GCTU <onboarding@resend.dev>',
+		from: "m@gctuvc.com",
 		subject: "Account verification ✽ Virtual Campus",
-		text: `Hi and welcome to virtual campus,\n\nClick the following link to verify your account: ${link}.\n\nSee you!\n\n\n(You cannot reply to this email.)`,
+		text: `Hi and welcome to GCTU virtual campus,\n\nClick the following link to verify your account: ${link}.\n\nSee you!\n\n\n(You cannot reply to this email.)`,
 	});
 }
 

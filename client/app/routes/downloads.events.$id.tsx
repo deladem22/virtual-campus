@@ -26,7 +26,7 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
 		duration: { hours: 1 },
 		description: event.shortDescription || event.description,
 		location: event.venue,
-		url: `https://${values.get("id")}.compa.so/events/${event.id}`,
+		url: `https://${values.get("id")}.gctuvc.com/events/${event.id}`,
 	});
 
 	const fn = `${slugify(event.title)}.ics`;

@@ -91,7 +91,7 @@ export const action = async ({ params, request }: ActionFunctionArgs) => {
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
 	return [
-		{ title: `@${data?.user?.username} | ${data?.meta.shortName} ✽ compa` },
+		{ title: `@${data?.user?.username} | ${data?.meta.shortName} ✽ gctuvc` },
 	];
 };
 

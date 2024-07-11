@@ -14,8 +14,12 @@ function Username({ showVerfied, user }: Props) {
 				<div className="inline-block i-lucide-verified text-green-500" />
 			)}
 			{/* This should be head */}
-			{user.username === "notgr" && (
+			{user.username === "frimp" && (
 				<div className="inline-block i-lucide-crown text-amber-500" />
+			)}
+			{/* This should be for moderators */}
+			{user.role === "moderator" && (
+				<div className="inline-block i-lucide-zap text-red-500" />
 			)}
 		</span>
 	);

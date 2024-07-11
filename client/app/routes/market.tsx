@@ -37,7 +37,7 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
 	return [
-		{ title: `Marketplace | ${data?.school.shortName} ✽ compa` },
+		{ title: `Marketplace | ${data?.school.shortName} ✽ gctuvc` },
 		{
 			name: "description",
 			content: "Looking for something to buy or sell? This is the place.",

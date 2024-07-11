@@ -8,7 +8,7 @@ export const loader = async () => {
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
 	return [
-		{ title: `Games | ${data?.school.shortName} | compa` },
+		{ title: `Games | ${data?.school.shortName} | gctuvc` },
 		{
 			name: "description",
 			content:

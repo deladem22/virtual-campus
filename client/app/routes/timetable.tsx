@@ -27,7 +27,7 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
 };
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
-	return [{ title: `Timetable | ${data?.school} ✽ compa` }];
+	return [{ title: `Timetable | ${data?.school} ✽ gctuvc` }];
 };
 
 export default function Timetable() {

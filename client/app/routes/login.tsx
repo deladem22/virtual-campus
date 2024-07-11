@@ -16,7 +16,7 @@ import { Button } from "../components/button";
 import { Input } from "../components/input";
 import { authCookie } from "../lib/cookies.server";
 import { signUser } from "../lib/jwt.server";
-import { compare } from "../lib/password.server";
+import { gctuvcre } from "../lib/password.server";
 import { prisma } from "../lib/prisma.server";
 import { values } from "../lib/values.server";
 
@@ -58,7 +58,7 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 		);
 	}
 
-	const passwordMatch = await compare(password, authCredential.password);
+	const passwordMatch = await gctuvcre(password, authCredential.password);
 	if (!passwordMatch) {
 		return json(
 			{
@@ -91,7 +91,7 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 };
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
-	return [{ title: `Login | ${data?.school} ✽ compa` }];
+	return [{ title: `Login | ${data?.school} ✽ gctuvc` }];
 };
 
 export default function Login() {

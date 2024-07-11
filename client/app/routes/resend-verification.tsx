@@ -17,7 +17,7 @@ export const loader = async ({ request }: ActionFunctionArgs) => {
 };
 
 export const meta = () => {
-	return [{ title: "Resend Verification ✽ compa" }];
+	return [{ title: "Resend Verification ✽ gctuvc" }];
 };
 
 export default function ResendVerification() {

@@ -50,7 +50,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
 	const images = JSON.parse(data?.product.images || "[]") as Media[];
 
 	return [
-		{ title: `${data?.product.name} | ${data?.school.shortName} ✽ compa` },
+		{ title: `${data?.product.name} | ${data?.school.shortName} ✽ gctuvc` },
 		{
 			name: "description",
 			content: data?.product.description,

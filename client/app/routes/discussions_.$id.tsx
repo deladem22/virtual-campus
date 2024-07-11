@@ -54,7 +54,7 @@ export const loader = async ({ request, params }: LoaderFunctionArgs) => {
 		});
 
 		vote = voteRecord?.up;
-	} catch {}
+	} catch { /* empty */ }
 
 	return json({
 		comments: await includeVotes(comments, request),
@@ -126,7 +126,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
 
 	return [
 		{
-			title: `@${data?.post.user.username} posted in Discussions | ${data?.meta.shortName} ✽ compa`,
+			title: `@${data?.post.user.username} posted in Discussions | ${data?.meta.shortName} ✽ gctuvc`,
 		},
 		{ name: "description", content: `${summary}…` },
 	];

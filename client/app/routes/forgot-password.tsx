@@ -47,19 +47,19 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 			token: randomStr(24),
 		},
 	});
-
-	const subdomain = process.env.SCHOOL;
+	// hold on to sub domain now
+	// const subdomain = process.env.SCHOOL;
 
 	const link = [
-		`https://${subdomain}.compa.so/reset-password?`,
+		`https://gctuvc.com/reset-password?`,
 		`email=${email}`,
 		`&token=${resetRequest.token}`,
 	].join("");
 
 	await send({
 		to: user.email,
-		from: "m@compa.so",
-		subject: "Reset Password ✽ compa",
+		from: "m@gctuvc.com",
+		subject: "Reset Password ✽ gctuv",
 		text: `Hi 👋🏽,\n\nYou requested to change your password. Click this link to continue: ${link}.\n\nAll the best!`,
 	});
 
@@ -67,7 +67,7 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 };
 
 export const meta = () => {
-	return [{ title: "Forgot Password ✽ compa" }];
+	return [{ title: "Forgot Password ✽ gctuvc" }];
 };
 
 export default function ForgotPassword() {

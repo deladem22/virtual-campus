@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import { MetaFunction } from "@remix-run/node";
 import { useNavigation, useSubmit } from "@remix-run/react";
 import clsx from "clsx";
@@ -12,7 +14,7 @@ import { timeFromString } from "../lib/time";
 import { uploadMedia } from "../lib/upload-media";
 
 export const meta: MetaFunction = () => {
-	return [{ title: "Add Event ✽ compa" }];
+	return [{ title: "Add Event ✽ gctuvc" }];
 };
 
 export default function AddEvent() {

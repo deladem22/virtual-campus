@@ -32,7 +32,7 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
 	return [
-		{ title: `Notifications | ${data?.school.shortName} ✽ compa` },
+		{ title: `Notifications | ${data?.school.shortName} ✽ gctuvc` },
 		{
 			name: "notifications",
 			content: "Find out about all your unread notifications",

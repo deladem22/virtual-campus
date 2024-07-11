@@ -6,18 +6,6 @@ const projectLinks = [
 		href: "",
 	},
 	{
-		name: "Report an issue",
-		href: "",
-	},
-	{
-		name: "Contribute",
-		href: "",
-	},
-	{
-		name: "Roadmap",
-		href: "",
-	},
-	{
 		name: "Data & Privacy Policy",
 		href: "",
 	},
