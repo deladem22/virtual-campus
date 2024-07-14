@@ -1,0 +1,1 @@
+import{R as r,j as t}from"./jsx-runtime-CAOzMBF_.js";import{c as a}from"./clsx-B-dksMZM.js";const l=r.forwardRef(({className:e,...s},o)=>t.jsx("select",{className:a("block bg-zinc-200 dark:bg-neutral-800 px-2 py-1 pe-6 rounded-lg font-medium",e),ref:o,...s}));export{l as S};

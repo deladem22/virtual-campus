@@ -1,0 +1,1 @@
+import{d as a}from"./dayjs.min-DReL-Uwu.js";function n(t){if(!t)return 0;const[r,s]=t.split(":").map(o=>Number.parseInt(o,10));return(r*60+s)*60}function i(t){return a().startOf("day").add(t,"seconds").format("hh:mma")}function m(t){return a().startOf("day").add(t,"seconds").format("HH:mm:ss")}function u(t,r){return n(t)<n(r)}export{n as a,m as b,u as i,i as t};
