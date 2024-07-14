@@ -12,6 +12,9 @@ export default defineConfig({
 			"~": "/app",
 		},
 	},
+	build: {
+		outDir: 'dist', 
+	},
 	server: { port: 3000 },
 	optimizeDeps: {
 		exclude: ["nock", "mock-aws-s3"],
