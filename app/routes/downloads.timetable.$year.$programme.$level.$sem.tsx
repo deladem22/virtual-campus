@@ -2,8 +2,8 @@ import type { LoaderFunctionArgs } from "@remix-run/node";
 import dayjs from "dayjs";
 import ics from "ics";
 import crypto from "node:crypto";
-import { prisma } from "../lib/prisma.server";
-import { values } from "../lib/values.server";
+import { prisma } from "~/lib/prisma.server";
+import { values } from "~/lib/values.server";
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {
 	const { year, programme, level, sem } = params;

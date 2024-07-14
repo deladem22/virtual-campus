@@ -1,15 +1,15 @@
 import { LoaderFunctionArgs, MetaFunction, json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import React from "react"
-import { CommunityInfo } from "../components/community-info";
-import { CommunityMod } from "../components/community-mod";
-import { PostInput } from "../components/post-input";
-import { PostItem, PostItemProps } from "../components/post-item";
-import { checkAuth } from "../lib/check-auth";
-import { checkMod } from "../lib/check-mod";
-import { prisma } from "../lib/prisma.server";
-import { renderSummary } from "../lib/render-summary.server";
-import { values } from "../lib/values.server";
+import { CommunityInfo } from "~/components/community-info";
+import { CommunityMod } from "~/components/community-mod";
+import { PostInput } from "~/components/post-input";
+import { PostItem, PostItemProps } from "~/components/post-item";
+import { checkAuth } from "~/lib/check-auth";
+import { checkMod } from "~/lib/check-mod";
+import { prisma } from "~/lib/prisma.server";
+import { renderSummary } from "~/lib/render-summary.server";
+import { values } from "~/lib/values.server";
 
 export const loader = async ({ request, params }: LoaderFunctionArgs) => {
 	const community = await prisma.community.findFirst({

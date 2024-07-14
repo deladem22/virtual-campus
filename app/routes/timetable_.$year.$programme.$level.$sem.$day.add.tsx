@@ -1,7 +1,7 @@
 import type { LoaderFunctionArgs } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
-import { LessonForm } from "../components/lesson-form";
-import { prisma } from "../lib/prisma.server";
+import { LessonForm } from "~/components/lesson-form";
+import { prisma } from "~/lib/prisma.server";
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {
 	const courses = await prisma.course.findMany({ orderBy: { code: "asc" } });

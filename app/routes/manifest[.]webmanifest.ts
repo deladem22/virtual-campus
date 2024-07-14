@@ -1,5 +1,5 @@
 import { json } from "@remix-run/node";
-import { values } from "../lib/values.server";
+import { values } from "~/lib/values.server";
 
 export const loader = async () => {
 	const shortName = values.get("shortName");

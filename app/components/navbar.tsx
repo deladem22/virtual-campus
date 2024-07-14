@@ -6,7 +6,7 @@ import {
 } from "@remix-run/react";
 import clsx from "clsx";
 import React from "react";
-import type { loader } from "../root";
+import type { loader } from "~/root";
 import { Avatar } from "./avatar";
 import { Username } from "./username";
 
@@ -46,11 +46,11 @@ const links = [
 		href: "/parlon",
 		icon: "i-lucide-video text-pink-500",
 	},
-	{
-		title: "Games",
-		href: "/games",
-		icon: "i-lucide-gamepad-2",
-	},
+	// {
+	// 	title: "Games",
+	// 	href: "/games",
+	// 	icon: "i-lucide-gamepad-2",
+	// },
 ];
 
 function Navbar() {

@@ -12,13 +12,13 @@ import {
 	useSubmit,
 } from "@remix-run/react";
 import { useForm, type FieldValues } from "react-hook-form";
-import { Button } from "../components/button";
-import { Input } from "../components/input";
-import { authCookie } from "../lib/cookies.server";
-import { signUser } from "../lib/jwt.server";
-import { gctuvcre } from "../lib/password.server";
-import { prisma } from "../lib/prisma.server";
-import { values } from "../lib/values.server";
+import { Button } from "~/components/button";
+import { Input } from "~/components/input";
+import { authCookie } from "~/lib/cookies.server";
+import { signUser } from "~/lib/jwt.server";
+import { gctuvcre } from "~/lib/password.server";
+import { prisma } from "~/lib/prisma.server";
+import { values } from "~/lib/values.server";
 
 export const loader = async () => {
 	const school = values.get("shortName");

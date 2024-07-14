@@ -3,8 +3,8 @@
 import { useRouteLoaderData } from "@remix-run/react";
 import clsx from "clsx";
 import React from "react";
-import { useParlon } from "../lib/parlon-context";
-import type { loader as rootLoader } from "../root";
+import { useParlon } from "~/lib/parlon-context";
+import type { loader as rootLoader } from "~/root";
 
 function SelfVideoPanel() {
 	const { user } = useRouteLoaderData<typeof rootLoader>("root") || {};

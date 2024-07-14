@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import {
 	json,
 	type LoaderFunctionArgs,
@@ -6,11 +7,11 @@ import {
 import { NavLink, useLoaderData } from "@remix-run/react";
 import clsx from "clsx";
 import parse from "html-react-parser";
-import { postTime } from "../components/post-time";
-import { checkAuth } from "../lib/check-auth";
-import { prisma } from "../lib/prisma.server";
-import { render } from "../lib/render.server";
-import { values } from "../lib/values.server";
+import { postTime } from "~/components/post-time";
+import { checkAuth } from "~/lib/check-auth";
+import { prisma } from "~/lib/prisma.server";
+import { render } from "~/lib/render.server";
+import { values } from "~/lib/values.server";
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
 	const userId = await checkAuth(request);

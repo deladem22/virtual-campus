@@ -1,7 +1,7 @@
 import { json, type ActionFunctionArgs } from "@remix-run/node";
-import { checkAuth } from "../lib/check-auth";
-import { prisma } from "../lib/prisma.server";
-import { slugify } from "../lib/slugify";
+import { checkAuth } from "~/lib/check-auth";
+import { prisma } from "~/lib/prisma.server";
+import { slugify } from "~/lib/slugify";
 
 export const loader = async () => {
 	const programmes = await prisma.programme.findMany({

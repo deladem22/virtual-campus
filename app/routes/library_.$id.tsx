@@ -1,6 +1,6 @@
 import { ActionFunctionArgs, json } from "@remix-run/node";
-import { checkAuth } from "../lib/check-auth";
-import { prisma } from "../lib/prisma.server";
+import { checkAuth } from "~/lib/check-auth";
+import { prisma } from "~/lib/prisma.server";
 
 export const action = async ({ request, params }: ActionFunctionArgs) => {
 	if (request.method !== "DELETE") {

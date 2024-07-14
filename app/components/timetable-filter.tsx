@@ -2,7 +2,7 @@
 import { useNavigate, useParams } from "@remix-run/react";
 import React from "react";
 import { useForm, useFormContext, type FieldValues } from "react-hook-form";
-import { useAsyncFetcher } from "../lib/use-async-fetcher";
+import { useAsyncFetcher } from "~/lib/use-async-fetcher";
 import { Input } from "./input";
 import { LargeSelect } from "./large-select";
 import { Select } from "./select";

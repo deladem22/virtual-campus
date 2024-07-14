@@ -1,6 +1,6 @@
 import type { Prisma } from "@prisma/client";
 import type { Jsonify } from "type-fest";
-import { usePostPeople } from "../lib/use-post-people";
+import { usePostPeople } from "~/lib/use-post-people";
 import { Avatar } from "./avatar";
 import { Link } from "@remix-run/react";
 

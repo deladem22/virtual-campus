@@ -16,14 +16,14 @@ import {
 } from "@remix-run/react";
 import React from "react";
 import { useForm, type FieldValues } from "react-hook-form";
-import { Button } from "../components/button";
-import { Input } from "../components/input";
-import { hash } from "../lib/password.server";
-import { prisma } from "../lib/prisma.server";
-import { sendEmailVerification } from "../lib/send-email-verification";
-import { USERNAME_REGEX } from "../lib/username-regex";
-import { values } from "../lib/values.server";
-import { restrictedUsernames } from "../lib/restrict-usernames";
+import { Button } from "~/components/button";
+import { Input } from "~/components/input";
+import { hash } from "~/lib/password.server";
+import { prisma } from "~/lib/prisma.server";
+import { sendEmailVerification } from "~/lib/send-email-verification";
+import { USERNAME_REGEX } from "~/lib/username-regex";
+import { values } from "~/lib/values.server";
+import { restrictedUsernames } from "~/lib/restrict-usernames";
 
 export const loader = async () => {
 	const school = values.get("shortName");

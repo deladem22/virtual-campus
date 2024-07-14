@@ -1,8 +1,8 @@
 import { useLoaderData } from "@remix-run/react";
 import type { ActionFunctionArgs } from "react-router";
-import { KnustLoginDirection } from "../components/knust-login-direction";
-import { sendEmailVerification } from "../lib/send-email-verification";
-import { values } from "../lib/values.server";
+import { KnustLoginDirection } from "~/components/knust-login-direction";
+import { sendEmailVerification } from "~/lib/send-email-verification";
+import { values } from "~/lib/values.server";
 
 export const loader = async ({ request }: ActionFunctionArgs) => {
 	const email = new URL(request.url).searchParams.get("email");

@@ -4,13 +4,13 @@ import { json, type ActionFunctionArgs } from "@remix-run/node";
 import { useFetcher, useLoaderData } from "@remix-run/react";
 import dayjs from "dayjs";
 import { useForm, type FieldValues } from "react-hook-form";
-import { Button } from "../components/button";
-import { Input } from "../components/input";
-import { KnustLoginDirection } from "../components/knust-login-direction";
-import { send } from "../lib/mail.server";
-import { prisma } from "../lib/prisma.server";
-import { randomStr } from "../lib/random-str";
-import { values } from "../lib/values.server";
+import { Button } from "~/components/button";
+import { Input } from "~/components/input";
+import { KnustLoginDirection } from "~/components/knust-login-direction";
+import { send } from "~/lib/mail.server";
+import { prisma } from "~/lib/prisma.server";
+import { randomStr } from "~/lib/random-str";
+import { values } from "~/lib/values.server";
 
 export const loader = async () => {
 	return { school: values.meta() };

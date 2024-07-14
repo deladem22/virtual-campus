@@ -5,8 +5,8 @@ import {
 	useRouteLoaderData,
 } from "@remix-run/react";
 import dayjs from "dayjs";
-import type { loader as rootLoader } from "../root";
-import type { loader } from "../routes/communities_.$slug";
+import type { loader as rootLoader } from "~/root";
+import type { loader } from "~/routes/communities_.$slug";
 import { Anchor } from "./anchor";
 import { Avatar } from "./avatar";
 import { Button } from "./button";

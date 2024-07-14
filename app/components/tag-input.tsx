@@ -2,9 +2,9 @@
 import { Link } from "@remix-run/react";
 import clsx from "clsx";
 import React from "react";
-import type { UseData } from "../lib/tag-use-data";
-import { useTagCourses } from "../lib/use-tag-courses";
-import { useTagProgrammes } from "../lib/use-tag-programmes";
+import type { UseData } from "~/lib/tag-use-data";
+import { useTagCourses } from "~/lib/use-tag-courses";
+import { useTagProgrammes } from "~/lib/use-tag-programmes";
 import { Button } from "./button";
 import { Input } from "./input";
 import { Modal } from "./modal";

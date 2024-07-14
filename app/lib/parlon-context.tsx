@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useRouteLoaderData } from "@remix-run/react";
 import React from "react";
-import type { loader as rootLoader } from "../root";
+import type { loader as rootLoader } from "~/root";
 import { BoatClient } from "./boat-client";
 
 const WAIT_TIME = 10_000;

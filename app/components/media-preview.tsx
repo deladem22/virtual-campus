@@ -3,7 +3,7 @@ import type { Media, Prisma } from "@prisma/client";
 import clsx from "clsx";
 import React from "react";
 import type { Jsonify } from "type-fest";
-import { ellipsizeFilename } from "../lib/files";
+import { ellipsizeFilename } from "~/lib/files";
 import { Avatar } from "./avatar";
 import { Thumbnail } from "./media-item";
 import { Modal } from "./modal";

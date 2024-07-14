@@ -1,20 +1,21 @@
 {
-  "name": "anon_client",
-  "private": true,
-  "sideEffects": false,
-  "type": "module",
-  "scripts": {
-    "build": "remix vite:build",
-    "dev": "remix vite:dev",
-    "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
-    "start": "prisma migrate deploy && prisma generate && npm run seed && remix-serve ./build/server/index.js",
-    "typecheck": "tsc",
-    "seed":"prisma db seed"
-  },
-  "prisma":{
-    "seed":"node prisma/seed.mjs"
-  },
-  "dependencies": {
+	"name": "client",
+	"private": true,
+	"sideEffects": false,
+	"type": "module",
+	"version": "0.0.0",
+	"scripts": {
+		"build": "remix vite:build",
+		"dev": "remix vite:dev",
+		"lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
+		"start": "prisma migrate deploy && prisma generate && npm run seed && remix-serve ./build/server/index.js",
+		"typecheck": "tsc",
+		"seed": "prisma db seed"
+	},
+	"prisma": {
+		"seed": "node prisma/seed.mjs"
+	},
+	"dependencies": {
 		"@aws-sdk/client-s3": "^3.504.0",
 		"@aws-sdk/lib-storage": "^3.504.0",
 		"@datastructures-js/queue": "^4.2.3",
@@ -34,7 +35,7 @@
 		"clsx": "^2.1.0",
 		"dayjs": "^1.11.10",
 		"dotenv": "^16.3.1",
-		"html-react-parser": "^5.1.1",
+		"html-react-parser": "^5.1.10",
 		"ics": "^3.7.2",
 		"isbot": "^4.1.0",
 		"jsonwebtoken": "^9.0.2",
@@ -99,6 +100,6 @@
 		"vite": "^5.2.11"
 	},
 	"engines": {
-		"node": ">=20.0.0"
+		"node": ">=18.0.0"
 	}
 }

@@ -1,9 +1,9 @@
 import { json, type LoaderFunctionArgs } from "@remix-run/node";
 import { Link, useLoaderData, useParams } from "@remix-run/react";
-import { PostContent } from "../components/post-content";
-import { PostItem } from "../components/post-item";
-import { prisma } from "../lib/prisma.server";
-import { render } from "../lib/render.server";
+import { PostContent } from "~/components/post-content";
+import { PostItem } from "~/components/post-item";
+import { prisma } from "~/lib/prisma.server";
+import { render } from "~/lib/render.server";
 
 export const loader = async ({ params, request }: LoaderFunctionArgs) => {
 	const splat = (params["*"] as string).split("/");

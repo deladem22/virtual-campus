@@ -6,12 +6,12 @@ import {
 	useRouteLoaderData,
 	type MetaFunction,
 } from "@remix-run/react";
-import { Anchor } from "../components/anchor";
-import { Avatar } from "../components/avatar";
-import { ellipsize } from "../lib/ellipsize";
-import { prisma } from "../lib/prisma.server";
-import { values } from "../lib/values.server";
-import type { loader as rootLoader } from "../root";
+import { Anchor } from "~/components/anchor";
+import { Avatar } from "~/components/avatar";
+import { ellipsize } from "~/lib/ellipsize";
+import { prisma } from "~/lib/prisma.server";
+import { values } from "~/lib/values.server";
+import type { loader as rootLoader } from "~/root";
 
 export const loader = async () => {
 	const communities = await prisma.community.findMany({

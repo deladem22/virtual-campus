@@ -1,8 +1,8 @@
 import { LoaderFunctionArgs, json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
-import { ProductItem } from "../components/product-item";
-import { prisma } from "../lib/prisma.server";
-import { notFound } from "../lib/responses";
+import { ProductItem } from "~/components/product-item";
+import { prisma } from "~/lib/prisma.server";
+import { notFound } from "~/lib/responses";
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {
 	const user = await prisma.user.findFirst({

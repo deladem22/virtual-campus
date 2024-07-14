@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/media-has-caption */
 import clsx from "clsx";
 import React from "react";
-import { useParlon } from "../lib/parlon-context";
-import useCountdown from "../lib/use-countdown";
+import { useParlon } from "~/lib/parlon-context";
+import useCountdown from "~/lib/use-countdown";
 
 function PeerVideoPanel() {
 	const { peerStream, peer, status, call, end } = useParlon();

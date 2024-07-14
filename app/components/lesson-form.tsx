@@ -11,11 +11,11 @@ import {
 import dayjs from "dayjs";
 import React from "react";
 import { useForm, useFormContext, type FieldValues } from "react-hook-form";
-import { days } from "../lib/days";
-import { isBefore } from "../lib/time";
-import { useAsyncFetcher } from "../lib/use-async-fetcher";
-import type { loader as rootLoader } from "../root";
-import type { AddLessonLoader } from "../routes/timetable_.$year.$programme.$level.$sem.$day.add";
+import { days } from "~/lib/days";
+import { isBefore } from "~/lib/time";
+import { useAsyncFetcher } from "~/lib/use-async-fetcher";
+import type { loader as rootLoader } from "~/root";
+import type { AddLessonLoader } from "~/routes/timetable_.$year.$programme.$level.$sem.$day.add";
 import { Button } from "./button";
 import { Input } from "./input";
 import { LargeSelect } from "./large-select";

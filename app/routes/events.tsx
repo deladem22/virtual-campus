@@ -8,14 +8,14 @@ import { Link, useLoaderData, useRouteLoaderData } from "@remix-run/react";
 import clsx from "clsx";
 import dayjs from "dayjs";
 import type { Jsonify } from "type-fest";
-import { Anchor } from "../components/anchor";
-import { PostTime } from "../components/post-time";
-import { Username } from "../components/username";
-import { checkAuth } from "../lib/check-auth";
-import { prisma } from "../lib/prisma.server";
-import { timeToString } from "../lib/time";
-import { values } from "../lib/values.server";
-import type { loader as rootLoader } from "../root";
+import { Anchor } from "~/components/anchor";
+import { PostTime } from "~/components/post-time";
+import { Username } from "~/components/username";
+import { checkAuth } from "~/lib/check-auth";
+import { prisma } from "~/lib/prisma.server";
+import { timeToString } from "~/lib/time";
+import { values } from "~/lib/values.server";
+import type { loader as rootLoader } from "~/root";
 
 export const loader = async () => {
 	const events = await prisma.eventItem.findMany({

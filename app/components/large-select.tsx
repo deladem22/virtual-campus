@@ -2,7 +2,7 @@
 import clsx from "clsx";
 import React from "react";
 import { FormProvider, useForm, type FieldValues } from "react-hook-form";
-import type { RequestState } from "../lib/request-state";
+import type { RequestState } from "~/lib/request-state";
 import { Input } from "./input";
 import { Modal } from "./modal";
 

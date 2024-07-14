@@ -4,10 +4,10 @@ import {
 	type ActionFunctionArgs,
 	type MetaFunction,
 } from "@remix-run/node";
-import { ProductForm } from "../components/product-form";
-import { checkAuth } from "../lib/check-auth";
-import { prisma } from "../lib/prisma.server";
-import { values } from "../lib/values.server";
+import { ProductForm } from "~/components/product-form";
+import { checkAuth } from "~/lib/check-auth";
+import { prisma } from "~/lib/prisma.server";
+import { values } from "~/lib/values.server";
 
 export const loader = async () => {
 	const categories = await prisma.category.findMany();

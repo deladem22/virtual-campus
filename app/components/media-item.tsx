@@ -1,5 +1,5 @@
 import { Media } from "@prisma/client";
-import { ellipsizeFilename, humanizeSize } from "../lib/files";
+import { ellipsizeFilename, humanizeSize } from "~/lib/files";
 import { FileThumbnail } from "./non-image-thumb";
 import { AudioItem } from "./audio-item";
 import { Jsonify } from "type-fest";

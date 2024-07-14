@@ -5,11 +5,11 @@ import {
 	type MetaFunction,
 } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
-import { ProductForm } from "../components/product-form";
-import { checkAuth } from "../lib/check-auth";
-import { prisma } from "../lib/prisma.server";
-import { forbidden, methodNotAllowed, notFound } from "../lib/responses";
-import { values } from "../lib/values.server";
+import { ProductForm } from "~/components/product-form";
+import { checkAuth } from "~/lib/check-auth";
+import { prisma } from "~/lib/prisma.server";
+import { forbidden, methodNotAllowed, notFound } from "~/lib/responses";
+import { values } from "~/lib/values.server";
 
 export const loader = async ({ request, params }: LoaderFunctionArgs) => {
 	const userId = await checkAuth(request);

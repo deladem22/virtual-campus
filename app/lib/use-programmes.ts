@@ -2,7 +2,7 @@ import { Programme } from "@prisma/client";
 import { useFetcher } from "@remix-run/react";
 import React from "react";
 import { RequestStatus } from "./request-status";
-import { loader as programmesLoader } from "../routes/programmes";
+import { loader as programmesLoader } from "~/routes/programmes";
 
 const cache: Programme[] = [];
 

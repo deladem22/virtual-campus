@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import React from "react";
-import { useAudioRecorder } from "../lib/use-audio-recorder";
+import { useAudioRecorder } from "~/lib/use-audio-recorder";
 
 interface Props {
 	onRecorded?: (blob: Blob) => void;

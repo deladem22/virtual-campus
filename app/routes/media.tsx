@@ -5,9 +5,9 @@ import {
 	type ActionFunctionArgs,
 } from "@remix-run/node";
 import sharp from "sharp";
-import { checkAuth } from "../lib/check-auth";
-import { randomStr } from "../lib/random-str";
-import { upload } from "../lib/s3.server";
+import { checkAuth } from "~/lib/check-auth";
+import { randomStr } from "~/lib/random-str";
+import { upload } from "~/lib/s3.server";
 
 const uploadHandler = unstable_composeUploadHandlers(
 	async ({ name, contentType, data, filename }) => {

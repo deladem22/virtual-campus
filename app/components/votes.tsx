@@ -2,7 +2,7 @@ import type { Prisma } from "@prisma/client";
 import { useFetcher, useRouteLoaderData } from "@remix-run/react";
 import clsx from "clsx";
 import type { Jsonify } from "type-fest";
-import type { loader } from "../root";
+import type { loader } from "~/root";
 
 type Post = Prisma.PostGetPayload<{ include: { user: true } }> & {
 	vote?: boolean;

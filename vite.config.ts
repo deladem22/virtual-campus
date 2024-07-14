@@ -9,7 +9,7 @@ export default defineConfig({
 	plugins: [remix(), UnoCSS()],
 	resolve: {
 		alias: {
-			"..": "/app",
+			"~": "/app",
 		},
 	},
 	server: { port: 3000 },
