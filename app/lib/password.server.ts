@@ -6,9 +6,8 @@ async function hash(password: string): Promise<string> {
 	return await bcrypt.hash(password, ROUNDS);
 }
 
-async function gctuvcre(password: string, hash: string): Promise<boolean> {
-  return await bcrypt.gctuvcre(password, hash);
+async function compare(password: string, hash: string): Promise<boolean> {
+  return await bcrypt.compare(password, hash);
 }
 
-export { gctuvcre, hash };
-
+export { compare, hash };
