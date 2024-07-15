@@ -22,7 +22,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
 		{ title: `Parlon | ${data?.school.shortName} | gctuvc` },
 		{
 			name: "description",
-			content: "Make friends, find love, learn from random people on campus",
+			content: "Make friends, learn from random people on campus",
 		},
 	];
 };
@@ -55,7 +55,7 @@ function ParlonContent() {
 					<ParlonLogo />
 				</h1>
 				<p className="text-secondary leading-tight">
-					Make friends, find love, learn from random people on campus
+					Make friends, learn from random people on campus
 				</p>
 			</header>
 
