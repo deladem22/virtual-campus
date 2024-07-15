@@ -51,7 +51,7 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 	// const subdomain = process.env.SCHOOL;
 
 	const link = [
-		`https://gctuvc.com/reset-password?`,
+		`https://virtual-campus-a3qu.onrender.com/reset-password?`,
 		`email=${email}`,
 		`&token=${resetRequest.token}`,
 	].join("");

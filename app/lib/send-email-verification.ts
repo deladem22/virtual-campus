@@ -29,7 +29,7 @@ async function sendEmail(verification: EmailVerificationRequest) {
 
 	const link = [
 		// will change after domain and hosting is bought
-		`https://gctuvc.com/verify-email/?`,  //omit subdomain for now
+		`https://virtual-campus-a3qu.onrender.com/verify-email/?`,  //omit subdomain for now
 		`email=${email}`,
 		`&token=${token}`,
 	].join("");
