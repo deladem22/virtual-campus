@@ -1,1 +1,0 @@
-import{j as e}from"./jsx-runtime-CAOzMBF_.js";const i=({data:n})=>[{title:`Games | ${n==null?void 0:n.school.shortName} | gctuvc`},{name:"description",content:"Coming soon…"}];function o(){return e.jsx("div",{className:"container min-h-[60vh]",children:e.jsx("div",{children:"Wait a little, it's gonna be fun…"})})}export{o as default,i as meta};
