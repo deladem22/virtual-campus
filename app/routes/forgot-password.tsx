@@ -6,7 +6,7 @@ import dayjs from "dayjs";
 import { useForm, type FieldValues } from "react-hook-form";
 import { Button } from "~/components/button";
 import { Input } from "~/components/input";
-import { KnustLoginDirection } from "~/components/knust-login-direction";
+import { GctuLoginDirection} from "~/components/gctu-login-direction";
 import { send } from "~/lib/mail.server";
 import { prisma } from "~/lib/prisma.server";
 import { randomStr } from "~/lib/random-str";
@@ -101,7 +101,7 @@ export default function ForgotPassword() {
 									Reset link has been sent to your email.
 								</div>
 
-								{school.id === "gctu" && <KnustLoginDirection />}
+								{school.id === "gctu" && <GctuLoginDirection/>}
 							</>
 						) : (
 							<>

@@ -1,4 +1,4 @@
-import { type EmailVerificationRequest } from "@prisma/client";
+import { type EmailVerificationRequest } from  "@prisma/client";
 import { send } from "./mail.server";
 import { prisma } from "./prisma.server";
 import { randomStr } from "./random-str";

@@ -1,11 +1,11 @@
-function KnustLoginDirection() {
+function GctuLoginDirection() {
 	return (
 		<div className="bg-red-50 dark:bg-red-700 dark:bg-opacity-10 p-2 rounded-lg mt-4">
 			To log into your email, go to{" "}
 			<a
 				className="underline text-red-500 dark:text-red-400"
 				target="_blank"
-				href="https://gmail.com/login"  //will change to prefiere mail eg gmail/outlook
+				href="https://gmail.com/"  //will change to prefiere mail eg gmail/outlook
 				rel="noreferrer"
 			>
 				gmail.com/login
@@ -15,4 +15,4 @@ function KnustLoginDirection() {
 	);
 }
 
-export { KnustLoginDirection };
+export { GctuLoginDirection };

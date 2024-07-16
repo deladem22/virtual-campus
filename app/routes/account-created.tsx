@@ -1,6 +1,6 @@
 import type { LoaderFunctionArgs, MetaFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
-import { KnustLoginDirection } from "~/components/knust-login-direction";
+import { GctuLoginDirection} from "~/components/gctu-login-direction";
 import { values } from "~/lib/values.server";
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
@@ -30,7 +30,7 @@ export default function AccountCreated() {
 					your account.
 				</p>
 
-				{school === "knust" && <KnustLoginDirection />}
+				{school === "gctu" && <GctuLoginDirection />}
 
 				<div className="mt-2 text-secondary">
 					<a
