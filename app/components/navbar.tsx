@@ -57,67 +57,72 @@ function Navbar() {
 	const { user, unreadNotifications } =
 		useRouteLoaderData<typeof loader>("root") || {};
 
-	return (
-		<header className="container mx-auto border-b border-zinc-200 dark:border-zinc-800 sticky top-0 bg-zinc-50 dark:bg-neutral-900 z-10">
-			<div className="rounded-xl py-2">
-				<div className="flex justify-between items-center">
+		return (
+			<header className="container mx-auto border-b border-zinc-200 dark:border-zinc-800 sticky top-0 bg-zinc-50 dark:bg-neutral-900 z-10">
+				<div className="rounded-xl py-2">
+					<div className="flex justify-between items-center">
 					<div>
 						<div className="flex gap-4 items-center">
-							<Link className="block shrink-0" to="/">
-								<img src="/sym.svg" width={32} className="inline" alt="virtual-campus" />
-							</Link>
+						<Link className="block shrink-0" to="/">
+							<img src="/sym.svg" width={32} className="inline" alt="virtual-campus" />
+						</Link>
 						</div>
 					</div>
-
+			
 					<div className="flex gap-2 items-center">
 						{Boolean(user) && (
-							<NavLink
-								className={({ isActive }) =>
-									clsx(
-										"size-8 rounded-full border-2 border-transparent bg-zinc-100 hover:bg-zinc-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 flex items-center justify-center relative",
-										{ "!bg-blue-600 text-white group is-active": isActive },
-									)
-								}
-								to="/notifications"
-							>
-								<div className="i-lucide-bell text-xl" />
-
-								{Boolean(unreadNotifications) && (
-									<div className="rounded-full absolute -top-1 -right-2 bg-blue-600 text-white font-medium px-1 text-xs !group-[.is-active]:bg-blue-700">
-										{unreadNotifications}
-									</div>
-								)}
-							</NavLink>
+						<NavLink
+							className={({ isActive }) =>
+							clsx(
+								"size-8 rounded-full border-2 border-transparent bg-zinc-100 hover:bg-zinc-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 flex items-center justify-center relative",
+								{ "!bg-blue-600 text-white group is-active": isActive }
+							)
+							}
+							to="/notifications"
+						>
+							<div className="i-lucide-bell text-xl" />
+			
+							{Boolean(unreadNotifications) && (
+							<div className="rounded-full absolute -top-1 -right-2 bg-blue-600 text-white font-medium px-1 text-xs !group-[.is-active]:bg-blue-700">
+								{unreadNotifications}
+							</div>
+							)}
+						</NavLink>
 						)}
 						<div className="font-medium bg-zinc-100 hover:bg-zinc-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 rounded-full p-1 pe-2 transition-[background] duration-200">
-							{user ? (
-								<NavLink
-									to={`/p/${user.username}`}
-									className={({ isActive }) =>
-										clsx("flex items-center gap-2 ", {
-											"group is-active": isActive,
-										})
-									}
-								>
-									<Avatar
-										className="rounded-full border-2 border-transparent group-[.is-active]:border-blue-600 group-[.is-active]:dark:border-amber-500 transition-[border-color] duration-200"
-										size={22}
-										name={user.username}
-									/>{" "}
-									<Username user={user} />
-								</NavLink>
-							) : (
-								<Link className="flex gap-2 items-center" to="/login">
-									<div className="i-lucide-arrow-right-circle opacity-50" />
-									Login
-								</Link>
-							)}
+						{user ? (
+							<div className="flex items-center gap-2">
+							<NavLink
+								to={`/p/${user.username}`}
+								className={({ isActive }) =>
+								clsx("flex items-center gap-2", {
+									"group is-active": isActive,
+								})
+								}
+							>
+								<Avatar
+								className="rounded-full border-2 border-transparent group-[.is-active]:border-blue-600 group-[.is-active]:dark:border-amber-500 transition-[border-color] duration-200"
+								size={22}
+								name={user.username}
+								/>{" "}
+								<Username user={user} />
+							</NavLink>
+							<Link to="/logout" className="ml-4 p-2 bg-red-500 text-white rounded-lg hover:bg-red-700 transition duration-200">
+								Logout
+							</Link>
+							</div>
+						) : (
+							<Link className="flex gap-2 items-center" to="/login">
+							<div className="i-lucide-arrow-right-circle opacity-50" />
+							Login
+							</Link>
+						)}
 						</div>
 					</div>
+					</div>
 				</div>
-			</div>
-		</header>
-	);
+				</header>
+			);
 }
 
 function BottomNav() {

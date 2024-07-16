@@ -28,18 +28,18 @@ async function sendEmail(verification: EmailVerificationRequest) {
 	const { email, token } = verification;
 
 	const link = [
-		// will change after domain and hosting is bought
-		`https://virtual-campus-a3qu.onrender.com/verify-email/?`,  //omit subdomain for now
+		`https://gctuvc.com/verify-email/?`,
 		`email=${email}`,
 		`&token=${token}`,
 	].join("");
 
 	return await send({
 		to: verification.email,
-		from: "m@gctuvc.com",
-		subject: "Account verification ✽ Virtual Campus",
-		text: `Hi and welcome to GCTU virtual campus,\n\nClick the following link to verify your account: ${link}.\n\nSee you!\n\n\n(You cannot reply to this email.)`,
+		from: 'Acme <onboarding@resend.dev>',
+		subject: "Account verification ✽ gctuvc",
+		text: `Hi and welcome to gctuvc,\n\nClick the following link to verify your account: ${link}.\n\nSee you!\n\n\n(You cannot reply to this email.)`,
 	});
 }
 
 export { sendEmailVerification };
+

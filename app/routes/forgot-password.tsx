@@ -51,15 +51,15 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 	// const subdomain = process.env.SCHOOL;
 
 	const link = [
-		`https://virtual-campus-a3qu.onrender.com/reset-password?`,
+		`https://gctuvc.com/reset-password?`,
 		`email=${email}`,
 		`&token=${resetRequest.token}`,
 	].join("");
 
 	await send({
 		to: user.email,
-		from: "m@gctuvc.com",
-		subject: "Reset Password ✽ gctuv",
+		from: 'Acme <onboarding@resend.dev>',
+		subject: "Reset Password ✽ gctuvc",
 		text: `Hi 👋🏽,\n\nYou requested to change your password. Click this link to continue: ${link}.\n\nAll the best!`,
 	});
 
