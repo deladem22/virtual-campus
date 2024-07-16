@@ -35,7 +35,7 @@ async function sendEmail(verification: EmailVerificationRequest) {
 
 	return await send({
 		to: verification.email,
-		from: 'Acme <onboarding@resend.dev>',
+		from: 'verification@gctuvc.com',
 		subject: "Account verification ✽ gctuvc",
 		text: `Hi and welcome to gctuvc,\n\nClick the following link to verify your account: ${link}.\n\nSee you!\n\n\n(You cannot reply to this email.)`,
 	});
