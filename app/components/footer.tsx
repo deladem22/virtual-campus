@@ -3,12 +3,9 @@ import { SymOutline } from "./sym-outline";
 const projectLinks = [
 	{
 		name: "About",
-		href: "",
+		href: "https://github.com/deladem22/virtual-campus/README.md",
 	},
-	{
-		name: "Data & Privacy Policy",
-		href: "",
-	},
+	
 ];
 
 function Footer() {
@@ -20,15 +17,21 @@ function Footer() {
 
 			<div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
 				<div className="col-span-2 lg:col-span-1">
-					<div className="font-bold">Virtual Campus</div>
+					<div className="font-bold">GCTU-Vitual Campus</div>
 
 					<div className="text-secondary mb-2">
-						Virtual Campus is An open initiative to promote collaboration and knowledge sharing
-						among students of Ghana Communication Technology University (GCTU). 
+						An open initiative to promote collaboration and knowledge sharing
+						among students of Ghana Communication & Technology University.
 					</div>
 
 					<div className="flex gap-4 flex-wrap">
-						
+						<a
+							className="inline-flex shrink-0 items-center rounded-lg gap-2 px-2 py-1 bg-zinc-200 dark:bg-neutral-700 dark:bg-opacity-50 font-medium"
+							href="https://github.com/deladem22/virtual-campus"
+						>
+							<div className="i-lucide-github" />
+							Source code
+						</a>
 
 						<div className="flex gap-2 items-center text-secondary shrink-0">
 							<div className="size-2 rounded-full bg-green-500" />
@@ -38,7 +41,7 @@ function Footer() {
 				</div>
 
 				<div className="lg:col-start-3 col-span-1">
-					<header className="font-bold">Project</header>
+					<header className="font-bold">final year project</header>
 
 					<ul className="text-secondary">
 						{projectLinks.map((link) => (

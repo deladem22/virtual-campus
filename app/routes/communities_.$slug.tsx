@@ -1,6 +1,6 @@
 import { LoaderFunctionArgs, MetaFunction, json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
-import React from "react"
+import React from "react";
 import { CommunityInfo } from "~/components/community-info";
 import { CommunityMod } from "~/components/community-mod";
 import { PostInput } from "~/components/post-input";
@@ -32,9 +32,7 @@ export const loader = async ({ request, params }: LoaderFunctionArgs) => {
 	let userId: number | undefined;
 	try {
 		userId = await checkAuth(request);
-	} catch(err){
-		throw json({err:"check auth failed"},{status:404})
-	}
+	} catch {}
 
 	const members = await prisma.communityMember.findMany({
 		where: { communityId: community.id },
@@ -45,7 +43,7 @@ export const loader = async ({ request, params }: LoaderFunctionArgs) => {
 	const membership = userId
 		? await prisma.communityMember.findFirst({
 				where: { communityId: community.id, userId },
-		})
+		  })
 		: null;
 
 	const posts = await prisma.post.findMany({
@@ -66,7 +64,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
 
 	return [
 		{
-			title: `${data.community.name} (+${data.community.handle}) | ${data.school.shortName} ✽ Virtual-Campus`,
+			title: `${data.community.name} (+${data.community.handle}) | ${data.school.shortName} ✽ gctu`,
 		},
 		{ name: "description", content: data.community.description },
 	];

@@ -1,5 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable jsx-a11y/media-has-caption */
 import { useRouteLoaderData } from "@remix-run/react";
 import clsx from "clsx";
 import React from "react";

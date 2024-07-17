@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
-/* eslint-disable react/no-unescaped-entities */
 import { Prisma, type User } from "@prisma/client";
 import {
 	json,
@@ -91,7 +89,7 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 };
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
-	return [{ title: `Create Account | ${data?.school} ✽ compa` }];
+	return [{ title: `Create Account | ${data?.school} ✽ gctu` }];
 };
 
 export default function CreateAccount() {
@@ -211,4 +209,3 @@ export default function CreateAccount() {
 		</div>
 	);
 }
-

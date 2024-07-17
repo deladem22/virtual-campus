@@ -1,4 +1,3 @@
-/* eslint-disable prefer-const */
 import { useFetcher, type SubmitOptions } from "@remix-run/react";
 import { type SubmitTarget } from "react-router-dom/dist/dom";
 import React from "react";

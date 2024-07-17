@@ -4,7 +4,7 @@ function ParlonLogo() {
 			width="300"
 			viewBox="0 0 622 135"
 			fill="none"
-    className="inline-block"
+      className="inline-block"
 			xmlns="http://www.w3.org/2000/svg"
 		>
 			<title>Parlon</title>

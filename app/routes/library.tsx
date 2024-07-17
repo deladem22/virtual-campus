@@ -48,8 +48,8 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
 	const searchQuery = new URL(request.url).search.substring(1);
 	const queryParams = qs.parse(searchQuery);
 
-	const query: Record<string, unknown> = {};
-	const tagsQuery = createTagsQuery(queryParams.tags as Record<string, unknown>);
+	const query: Record<string, any> = {};
+	const tagsQuery = createTagsQuery(queryParams.tags as Record<string, any>);
 
 	if (queryParams.q) {
 		query.media = {
@@ -96,7 +96,7 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
 	return [
-		{ title: `Library | ${data?.school.shortName} | gctuvc` },
+		{ title: `Library | ${data?.school.shortName} | gctu` },
 		{
 			name: "description",
 			content:

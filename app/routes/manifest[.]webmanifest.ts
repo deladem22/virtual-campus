@@ -3,7 +3,7 @@ import { values } from "~/lib/values.server";
 
 export const loader = async () => {
 	const shortName = values.get("shortName");
-	const appName = `${shortName} ✽ gctuvc`;
+	const appName = `${shortName} ✽ gctu`;
 
 	return json(
 		{

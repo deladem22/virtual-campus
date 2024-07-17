@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import { json, type MetaFunction } from "@remix-run/node";
 import { useLoaderData, useRouteLoaderData } from "@remix-run/react";
 import { Anchor } from "~/components/anchor";
@@ -19,10 +18,10 @@ export const loader = async () => {
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
 	return [
-		{ title: `Parlon | ${data?.school.shortName} | gctuvc` },
+		{ title: `Parlon | ${data?.school.shortName} | gctu` },
 		{
 			name: "description",
-			content: "Make friends, learn from random people on campus",
+			content: "Make friends, find love, learn from random people on campus",
 		},
 	];
 };
@@ -55,7 +54,7 @@ function ParlonContent() {
 					<ParlonLogo />
 				</h1>
 				<p className="text-secondary leading-tight">
-					Make friends, learn from random people on campus
+					Make friends, find love, learn from random people on campus
 				</p>
 			</header>
 

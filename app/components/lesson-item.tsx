@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
-/* eslint-disable react/no-unescaped-entities */
 import type { Prisma } from "@prisma/client";
 import { Link, useRouteLoaderData } from "@remix-run/react";
 import clsx from "clsx";

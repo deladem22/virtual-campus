@@ -11,3 +11,4 @@ async function compare(password: string, hash: string): Promise<boolean> {
 }
 
 export { compare, hash };
+

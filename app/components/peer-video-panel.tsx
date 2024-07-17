@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/media-has-caption */
 import clsx from "clsx";
 import React from "react";
 import { useParlon } from "~/lib/parlon-context";

@@ -1,86 +1,96 @@
-import {Device} from "mediasoup-client"
-import {Peer,WebSocketTransport} from "protoo-client"
+import { Device } from "mediasoup-client";
+import { Peer, WebSocketTransport } from "protoo-client";
 
 interface PeerInfo {
-    id:string;
-    stream:MediaStream;
+	id: string;
+	stream: MediaStream;
 }
 
-type JoinCallback=(peer:PeerInfo)=>void|Promise<void>;
-type LeaveCallback=(peerId:string)=>void|Promise<void>
+type JoinCallback = (peer: PeerInfo) => void | Promise<void>;
+type LeaveCallback = (peerId: string) => void | Promise<void>;
 
-type CallbackMap={
-    join:JoinCallback;
-    leave:LeaveCallback;
-}
+type CallbackMap = {
+	join: JoinCallback;
+	leave: LeaveCallback;
+};
 
-class BoatClient{
-    private endpoint:string;
-    private client:Peer|null=null;
-    private device:Device;
+class BoatClient {
+	private endpoint: string;
+	private client: Peer | null = null;
+	private device: Device;
 
-    private onJoin:JoinCallback|null=null;
-    private onLeave:LeaveCallback|null=null;
+	private onJoin: JoinCallback | null = null;
+	private onLeave: LeaveCallback | null = null;
 
-    peers:PeerInfo[]=[];
+	peers: PeerInfo[] = [];
 
-    constructor(endpoint:string){
-        this.endpoint=endpoint;
-        this.device=new Device();
-    }
+	/**
+	 * @example
+	 * const boat = new BoatClient('ws://localhost:3000/room/<room-id>/<peer-id>');
+	 */
+	constructor(endpoint: string) {
+		this.endpoint = endpoint;
+		this.device = new Device();
+	}
 
-    async connect(options:{stream:MediaStream}){
-        const ws=new WebSocketTransport(this.endpoint);
-        const client=new Peer(ws);
+	async connect(options: { stream: MediaStream }) {
+		const ws = new WebSocketTransport(this.endpoint);
+		const client = new Peer(ws);
 
-        this.client=client;
+		this.client = client;
 
-        this.client.on("open",async ()=>{
-            const rtpCapabilities=await client.request("getRtpCapabilities");
-            await this.device.load({routerRtpCapabilities:rtpCapabilities});
+		this.client.on("open", async () => {
+			const rtpCapabilities = await client.request("getRtpCapabilities");
+			await this.device.load({ routerRtpCapabilities: rtpCapabilities });
 
-            const data=await client.request("createProducerTransport",{
-                rtpCapabilities,
-            });
+			const data = await client.request("createProducerTransport", {
+				rtpCapabilities,
+			});
 
-            const transport=this.device.createSendTransport(data);
-            transport.on("connect",async({dtlsParameters},callback,errback)=>{
-                try{
-                    await client.request("connectProducerTransport",{
-                        dtlsParameters,
-                    })
-                    callback();
-                }catch(err){
-                    errback(err as Error)
-                }
-            });
+			const transport = this.device.createSendTransport(data);
+			transport.on("connect", async ({ dtlsParameters }, callback, errback) => {
+				try {
+					await client.request("connectProducerTransport", {
+						dtlsParameters,
+					});
+					callback();
+				} catch (err) {
+					errback(err as Error);
+				}
+			});
 
-            transport.on("produce",async({kind,rtpParameters},callback,errback)=>{
-                try{
-                    const {id}=await client.request("produce",{
-                        id:transport.id,
-                        kind,
-                        rtpParameters,
-                    })
-                    callback({id})
+			transport.on(
+				"produce",
+				async ({ kind, rtpParameters }, callback, errback) => {
+					try {
+						const { id } = await client.request("produce", {
+							id: transport.id,
+							kind,
+							rtpParameters,
+						});
 
-                }catch(err){
-                    errback(err as Error);
+						callback({ id });
+					} catch (err) {
+						errback(err as Error);
+					}
+				},
+			);
 
-                }
-            });
+			// TODO: check parameters if we're producing video/audio or audio only
+			await transport.produce({
+				track: options.stream.getVideoTracks()[0],
+			});
 
-            await transport.produce({
-                track:options.stream.getVideoTracks()[0],
-            });
-            await transport.produce({track:options.stream.getAudioTracks()[0]})
+			await transport.produce({ track: options.stream.getAudioTracks()[0] });
 
-            const peers=await client.request("getPeers");
-            for(const peer of peers) await this.admit(peer);
+			// then ask for existing peers
+			const peers = await client.request("getPeers");
+			for (const peer of peers) await this.admit(peer);
 
-            await client.request("notifyJoin");
-        })
-        this.client.on("request", async (request, accept) => {
+			await client.request("notifyJoin");
+		});
+
+		this.client.on("request", async (request, accept) => {
 			switch (request.method) {
 				case "newPeer": {
 					await this.admit(request.data);

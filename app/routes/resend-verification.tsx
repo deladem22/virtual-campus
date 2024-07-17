@@ -1,7 +1,6 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useLoaderData } from "@remix-run/react";
 import type { ActionFunctionArgs } from "react-router";
-
+import { GctuLoginDirection} from "~/components/gctu-login-direction";
 import { sendEmailVerification } from "~/lib/send-email-verification";
 import { values } from "~/lib/values.server";
 
@@ -18,16 +17,16 @@ export const loader = async ({ request }: ActionFunctionArgs) => {
 };
 
 export const meta = () => {
-	return [{ title: "Resend Verification ✽ gctuvc" }];
+	return [{ title: "Resend Verification ✽ gctu" }];
 };
 
 export default function ResendVerification() {
-	// const { school } = useLoaderData<typeof loader>();
+	const { school } = useLoaderData<typeof loader>();
 	return (
 		<div className="container min-h-[60vh] mx-auto">
 			<div>Verification link sent</div>
 
-			
+			{school.id === "gctu" && <GctuLoginDirection/>}
 		</div>
 	);
 }

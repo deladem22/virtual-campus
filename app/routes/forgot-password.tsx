@@ -1,12 +1,10 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import { json, type ActionFunctionArgs } from "@remix-run/node";
 import { useFetcher, useLoaderData } from "@remix-run/react";
 import dayjs from "dayjs";
 import { useForm, type FieldValues } from "react-hook-form";
 import { Button } from "~/components/button";
 import { Input } from "~/components/input";
-import { GctuLoginDirection} from "~/components/gctu-login-direction";
+import { GctuLoginDirection } from "~/components/gctu-login-direction";
 import { send } from "~/lib/mail.server";
 import { prisma } from "~/lib/prisma.server";
 import { randomStr } from "~/lib/random-str";
@@ -47,7 +45,7 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 			token: randomStr(24),
 		},
 	});
-	// hold on to sub domain now
+
 	// const subdomain = process.env.SCHOOL;
 
 	const link = [
@@ -58,8 +56,8 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 
 	await send({
 		to: user.email,
-		from: 'Acme <onboarding@resend.dev>',
-		subject: "Reset Password ✽ gctuvc",
+		from: 'verification@gctuvc.com',
+		subject: "Reset Password ✽ gctu",
 		text: `Hi 👋🏽,\n\nYou requested to change your password. Click this link to continue: ${link}.\n\nAll the best!`,
 	});
 
@@ -67,7 +65,7 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 };
 
 export const meta = () => {
-	return [{ title: "Forgot Password ✽ gctuvc" }];
+	return [{ title: "Forgot Password ✽ gctu" }];
 };
 
 export default function ForgotPassword() {

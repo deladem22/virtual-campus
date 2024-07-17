@@ -1,6 +1,6 @@
 import type { LoaderFunctionArgs, MetaFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
-import { GctuLoginDirection} from "~/components/gctu-login-direction";
+import { GctuLoginDirection } from "~/components/gctu-login-direction";
 import { values } from "~/lib/values.server";
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
@@ -9,7 +9,7 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
 };
 
 export const meta: MetaFunction = () => {
-	return [{ title: "Account Created ✽ Virtual-Campus" }];
+	return [{ title: "Account Created ✽ gctu" }];
 };
 
 export default function AccountCreated() {
@@ -26,11 +26,11 @@ export default function AccountCreated() {
 					</span>
 				</p>
 				<p className="mt-2">
-					You may not be able to add or edit content on Virtual-Campus until you verify
+					You may not be able to add or edit content on gctu until you verify
 					your account.
 				</p>
 
-				{school === "gctu" && <GctuLoginDirection />}
+				{school === "gctu" && <GctuLoginDirection/>}
 
 				<div className="mt-2 text-secondary">
 					<a

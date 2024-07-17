@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Post } from "@prisma/client";
 import { useRouteLoaderData } from "@remix-run/react";
 import clsx from "clsx";

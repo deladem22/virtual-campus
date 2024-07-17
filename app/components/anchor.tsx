@@ -1,4 +1,3 @@
-/* eslint-disable react/display-name */
 import { Link } from "@remix-run/react";
 import { RemixLinkProps } from "@remix-run/react/dist/components";
 import clsx from "clsx";

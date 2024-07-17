@@ -1,4 +1,3 @@
-/* eslint-disable react/display-name */
 import clsx from "clsx";
 import React from "react";
 

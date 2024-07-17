@@ -1,4 +1,4 @@
-import { type EmailVerificationRequest } from  "@prisma/client";
+import { type EmailVerificationRequest } from "@prisma/client";
 import { send } from "./mail.server";
 import { prisma } from "./prisma.server";
 import { randomStr } from "./random-str";
@@ -28,18 +28,17 @@ async function sendEmail(verification: EmailVerificationRequest) {
 	const { email, token } = verification;
 
 	const link = [
-		`https://gctuvc.com/verify-email/?`,
-		`email=${email}`,
-		`&token=${token}`,
-	].join("");
+        `https://gctuvc.com/verify-email/?`,
+        `email=${email}`,
+        `&token=${token}`,
+    ].join("");
 
 	return await send({
-		to: verification.email,
-		from: 'verification@gctuvc.com',
-		subject: "Account verification ✽ gctuvc",
-		text: `Hi and welcome to gctuvc,\n\nClick the following link to verify your account: ${link}.\n\nSee you!\n\n\n(You cannot reply to this email.)`,
+			to: verification.email,
+			from: 'verification@gctuvc.com',
+			subject: "Account verification ✽ gctuvc",
+			text: `Hi and welcome to gctuvc,\n\nClick the following link to verify your account: ${link}.\n\nSee you!\n\n\n(You cannot reply to this email.)`,
 	});
 }
 
 export { sendEmailVerification };
-

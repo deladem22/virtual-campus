@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable no-empty */
-/* eslint-disable react/no-unescaped-entities */
 import type { User } from "@prisma/client";
 import type { LoaderFunctionArgs, MetaFunction } from "@remix-run/node";
 import { prisma } from "~/lib/prisma.server";
@@ -70,7 +67,7 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
 	return [
-		{ title: `Marketplace | ${data?.school.shortName} ✽ compa` },
+		{ title: `Marketplace | ${data?.school.shortName} ✽ gctu` },
 		{
 			name: "description",
 			content: "Looking for something to buy or sell? This is the place.",

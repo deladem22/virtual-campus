@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import { Link } from "@remix-run/react";
 import clsx from "clsx";
 import React from "react";

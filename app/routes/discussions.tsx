@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import {
 	json,
 	type ActionFunctionArgs,
@@ -47,7 +46,7 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
 				select: { communityId: true },
 			})
 		).map((m) => m.communityId);
-	} catch { /* empty */ }
+	} catch {}
 
 	const posts = await prisma.post.findMany({
 		take: PAGE_SIZE,
@@ -86,7 +85,7 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
 	return [
-		{ title: `Discussions | ${data?.school.shortName} ✽ gctuvc` },
+		{ title: `Discussions | ${data?.school.shortName} ✽ gctu` },
 		{
 			name: "description",
 			content: `Find out about all the conversations going on in ${data?.school.shortName}. Share ideas and learn from each other.`,

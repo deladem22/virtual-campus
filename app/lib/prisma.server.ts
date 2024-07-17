@@ -1,4 +1,3 @@
-/* eslint-disable no-var */
 import { Prisma, PrismaClient } from "@prisma/client";
 
 let prisma: PrismaClient | ReturnType<typeof installMiddleware>;

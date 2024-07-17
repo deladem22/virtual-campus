@@ -1,6 +1,5 @@
 import { json } from "@remix-run/node";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 type Data = Record<string, any> | null
 
 function badRequest(data: Data = null) {

@@ -5,7 +5,7 @@ function GctuLoginDirection() {
 			<a
 				className="underline text-red-500 dark:text-red-400"
 				target="_blank"
-				href="https://gmail.com/"  //will change to prefiere mail eg gmail/outlook
+				href="https://gmail.com/"
 				rel="noreferrer"
 			>
 				gmail.com/login

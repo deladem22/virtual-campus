@@ -55,10 +55,10 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
 	return [
-		{ title: `Your Market Profile | ${data?.school.shortName} ✽ gctuvc` },
+		{ title: `Your Market Profile | ${data?.school.shortName} ✽ gctu` },
 		{
 			name: "description",
-			content: "Set up your market profile to be able to sell on gctuvc.",
+			content: "Set up your market profile to be able to sell on gctu.",
 		},
 	];
 };
@@ -93,7 +93,7 @@ export default function MarketProfile() {
 				<div className="col-span-1 lg:col-span-3">
 					<h1 className="font-bold text-lg">Market profile</h1>
 					<p>
-						Set up your market profile to be able to sell on gctuvc. These
+						Set up your market profile to be able to sell on gctu. These
 						details allow customers to identify and reach you.
 					</p>
 

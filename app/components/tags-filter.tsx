@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
 import { DEFAULT_SELECTIONS, Selections, TagInput } from "./tag-input";
 import { useLocation, useNavigate } from "@remix-run/react";

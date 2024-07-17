@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import { json, type MetaFunction } from "@remix-run/node";
 import { values } from "~/lib/values.server";
 
@@ -8,7 +7,7 @@ export const loader = async () => {
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
 	return [
-		{ title: `Games | ${data?.school.shortName} | gctuvc` },
+		{ title: `Games | ${data?.school.shortName} | gctu` },
 		{
 			name: "description",
 			content:

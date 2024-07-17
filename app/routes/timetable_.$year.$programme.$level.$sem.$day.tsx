@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import {
 	json,
 	type ActionFunctionArgs,
@@ -98,7 +97,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
 	const description = `See timetable for ${data?.programme}, L${data?.level} for the year ${data?.year}`;
 
 	return [
-		{ title: `Timetable | ${data?.school.shortName} ✽ gctuvc` },
+		{ title: `Timetable | ${data?.school.shortName} ✽ gctu` },
 		{ name: "description", content: description },
 	];
 };

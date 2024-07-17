@@ -1,5 +1,3 @@
-/* eslint-disable import/no-unresolved */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import "@unocss/reset/tailwind.css";
 
 import "virtual:uno.css";

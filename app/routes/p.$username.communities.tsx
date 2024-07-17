@@ -38,7 +38,7 @@ export const loader = async ({ request, params }: LoaderFunctionArgs) => {
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
 	return [
 		{
-			title: `@${data?.user?.username} / Communities | ${data?.meta.shortName} ✽ gctuvc`,
+			title: `@${data?.user?.username} / Communities | ${data?.meta.shortName} ✽ gctu`,
 		},
 	];
 };

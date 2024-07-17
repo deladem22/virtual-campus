@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import { useNavigate, useParams } from "@remix-run/react";
 import React from "react";
 import { useForm, useFormContext, type FieldValues } from "react-hook-form";

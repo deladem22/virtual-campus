@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 function createTagsQuery(tagsParam: Record<string, any> = {}) {
   const tags = Object.entries(tagsParam).flatMap(
 		([id, selection]) => {

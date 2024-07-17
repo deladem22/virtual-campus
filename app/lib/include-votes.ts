@@ -13,7 +13,7 @@ async function includeVotes(
 			? await prisma.vote.findMany({
 					where: { userId, postId: { in: posts.map(({ id }) => id) } },
 					select: { up: true, postId: true },
-			})
+			  })
 			: [];
 
 		const postVoteIndex: Record<number, boolean> = {};

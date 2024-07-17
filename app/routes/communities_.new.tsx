@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
-/* eslint-disable react/no-unescaped-entities */
 import {
     ActionFunctionArgs,
     MetaFunction,
@@ -58,7 +56,7 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
 	return [
-		{ title: `Start a Community | ${data?.school.shortName} ✽ gctuvc` },
+		{ title: `Start a Community | ${data?.school.shortName} ✽ gctu` },
 		{ name: "description", content: "Put people together and make wonders" },
 	];
 };

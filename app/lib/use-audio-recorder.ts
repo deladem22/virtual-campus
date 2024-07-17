@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
 
 // Modified from: https://github.com/samhirtarif/react-audio-recorder/blob/1c5298cf29aaf9cd6415180a37ee14ca36ccba70/src/hooks/useAudioRecorder.ts

@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import {
 	json,
 	type LoaderFunctionArgs,
@@ -33,7 +32,7 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
 	return [
-		{ title: `Notifications | ${data?.school.shortName} ✽ gctuvc` },
+		{ title: `Notifications | ${data?.school.shortName} ✽ gctu` },
 		{
 			name: "notifications",
 			content: "Find out about all your unread notifications",

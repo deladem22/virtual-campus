@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/media-has-caption */
 import type { Media, Prisma } from "@prisma/client";
 import clsx from "clsx";
 import React from "react";

@@ -66,7 +66,7 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 };
 
 export const meta: MetaFunction = () => {
-	return [{ title: "Reset Password ✽ gctuvc" }];
+	return [{ title: "Reset Password ✽ gctu" }];
 };
 
 export default function ResetPassword() {

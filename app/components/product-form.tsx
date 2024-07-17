@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import type { Media, Product } from "@prisma/client";
 import { useFetcher, useLoaderData } from "@remix-run/react";
 import React from "react";

@@ -1,7 +1,7 @@
 export const restrictedUsernames = [
-	"frimp",
-	"gctuvc",
-	"gctucv.com",
+	"frimpong",
+	"gctu",
+	"gctuvc.com",
 	"admin",
 	"sysadmin",
 	"info",

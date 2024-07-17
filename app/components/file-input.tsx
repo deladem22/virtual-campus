@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable react/prop-types */
-/* eslint-disable react/display-name */
 import clsx from "clsx";
 import React from "react";
 
@@ -13,7 +10,6 @@ const FileInput = React.forwardRef<
 			className={clsx(
 				"flex rounded-lg px-2 py-1 font-medium bg-zinc-200 dark:bg-neutral-800 cursor-pointer w-[7.2rem] disabled:opacity-50",
 				className,
-				// eslint-disable-next-line react/prop-types
 				{ "opacity-60 !cursor-default": props.disabled },
 			)}
 		>

@@ -5,8 +5,7 @@ const days = [
 	"Wednesday",
 	"Thursday",
 	"Friday",
-	"Saturday"
-	
+	"Saturday",
 ];
 
 export { days };
