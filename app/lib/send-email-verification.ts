@@ -30,7 +30,7 @@ async function sendEmail(verification: EmailVerificationRequest) {
 	const encodedEmail = encodeURIComponent(email);
 	const encodedToken = encodeURIComponent(token);
 
-	const link = `http://localhost:3000/verify-email/?email=${encodedEmail}&token=${encodedToken}`;
+	const link = `https://gctuvc.com/verify-email/?email=${encodedEmail}&token=${encodedToken}`;
 
 	return await send({
 			to: verification.email,
