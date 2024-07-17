@@ -27,3 +27,4 @@ export const loader = async ({ request }: ActionFunctionArgs) => {
 
 	return redirect("/login?verified=true");
 };
+

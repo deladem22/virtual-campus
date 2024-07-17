@@ -1,19 +1,27 @@
-import { vitePlugin as remix } from "@remix-run/dev";
-import { installGlobals } from "@remix-run/node";
-import UnoCSS from "unocss/vite";
-import { defineConfig } from "vite";
+	import { vitePlugin as remix } from "@remix-run/dev";
+	import { installGlobals } from "@remix-run/node";
+	import UnoCSS from "unocss/vite";
+	import { defineConfig } from "vite";
 
-installGlobals();
+	installGlobals();
 
-export default defineConfig({
+	export default defineConfig({
 	plugins: [remix(), UnoCSS()],
 	resolve: {
 		alias: {
-			"~": "/app",
+		"~": "/app",
 		},
 	},
 	server: { port: 3000 },
 	optimizeDeps: {
-		exclude: ["nock", "mock-aws-s3"],
+		exclude: ["nock", "mock-aws-s3", "@mapbox/node-pre-gyp"],
 	},
-});
+	build: {
+		commonjsOptions: {
+		exclude: ["@mapbox/node-pre-gyp"],
+		},
+		rollupOptions: {
+		external: ["@mapbox/node-pre-gyp"],
+		},
+	},
+	});
