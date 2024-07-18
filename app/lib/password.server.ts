@@ -1,4 +1,4 @@
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 
 const ROUNDS = process.env.NODE_ENV === "production" ? 12 : 4;
 
