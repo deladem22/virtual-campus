@@ -1,1 +1,0 @@
-import{R as t,j as a}from"./jsx-runtime-CAOzMBF_.js";import{c as n}from"./clsx-B-dksMZM.js";const p=t.forwardRef(({className:r,...s},o)=>a.jsx("input",{ref:o,className:n("block w-full rounded-lg bg-zinc-200 dark:bg-neutral-800 px-2 py-1 focus:ring-2",r),...s}));export{p as I};

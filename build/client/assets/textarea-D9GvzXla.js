@@ -1,1 +1,0 @@
-import{R as t,j as o}from"./jsx-runtime-CAOzMBF_.js";import{c as s}from"./clsx-B-dksMZM.js";const d=t.forwardRef(({className:r,...a},e)=>o.jsx("textarea",{className:s("w-full rounded-lg bg-zinc-100 dark:bg-neutral-800 border-zinc-200 dark:border-neutral-700 p-2 h-30",r),ref:e,...a}));export{d as T};
