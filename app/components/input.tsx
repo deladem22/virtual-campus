@@ -1,3 +1,6 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/display-name */
+
 import clsx from "clsx";
 import React from "react";
 

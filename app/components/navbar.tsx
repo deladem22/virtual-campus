@@ -41,11 +41,11 @@ const links = [
 		href: "/market",
 		icon: "i-lucide-shopping-bag",
 	},
-	{
-		title: "Parlon",
-		href: "/parlon",
-		icon: "i-lucide-video text-pink-500",
-	},
+	// {
+	// 	title: "Parlon",
+	// 	href: "/parlon",
+	// 	icon: "i-lucide-video text-pink-500",
+	// },
 	
 ];
 
