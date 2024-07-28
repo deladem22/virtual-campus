@@ -18,16 +18,16 @@
 
 	const members = [
 	{
-		name: "Member 1",
-		imgSrc: "/member1.jpg",
+		name: "Deladem Kpor ",
+		imgSrc: "/dela_img.jpg",
 	},
 	{
-		name: "Member 2",
-		imgSrc: "/member2.jpg",
+		name: "Asamoah Yeboah",
+		imgSrc: "/kojo.jpg",
 	},
 	{
-		name: "Member 3",
-		imgSrc: "/member3.jpg",
+		name: "John Coleman",
+		imgSrc: "/colman.jpg",
 	},
 	];
 

@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable react/no-unescaped-entities */
 import { Prisma, type User } from "@prisma/client";
 import {
 	json,
@@ -121,8 +123,8 @@ export default function CreateAccount() {
 	}, [actionData, setError]);
 
 	return (
-		<div className="container mx-auto">
-			<div className="min-h-[60vh]">
+		<div className="container mx-auto bg-cover bg-center min-h-screen" style={{ backgroundImage: 'url("/public/gctu_image.jpg")' }}>
+			<div className="min-h-[60vh] flex items-center justify-center">
 				<div className="lg:max-w-[24rem] mx-auto">
 					<form
 						className="bg-white dark:bg-neutral-900 rounded-lg border dark:border-neutral-800 p-4"
@@ -152,7 +154,7 @@ export default function CreateAccount() {
 
 						<label className="block mt-2">
 							<div>
-								Email{" "}
+								SchoolMail{" "}
 								{emailState.error && (
 									<small className="text-red-500 pl-2">
 										{emailState.error.message}
@@ -172,7 +174,7 @@ export default function CreateAccount() {
 									setValueAs(v) {
 										return v.toLowerCase();
 									},
-								})}
+								})} placeholder="index number"
 							/>
 							<small className="text-secondary" style={{ lineHeight: "1rem" }}>
 								Your school email. You'll need to verify your account.{" "}
@@ -183,7 +185,7 @@ export default function CreateAccount() {
 							Password
 							<Input
 								type="password"
-								{...register("password", { required: true, minLength: 8 })}
+								{...register("password", { required: true, minLength: 8 })} placeholder="password"
 							/>
 							<small className="text-secondary">Minimum of 8 characters</small>
 						</label>

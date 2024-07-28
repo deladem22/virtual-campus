@@ -10,6 +10,7 @@ import type { loader } from "~/root";
 import { Avatar } from "./avatar";
 import { Username } from "./username";
 
+
 const links = [
 	{
 		title: "Discussions",

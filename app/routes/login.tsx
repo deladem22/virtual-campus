@@ -1,5 +1,5 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/no-unescaped-entities */
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import {
 	json,
 	type ActionFunctionArgs,
@@ -110,8 +110,8 @@ export default function Login() {
 	const $email = watch("email");
 
 	return (
-		<div className="container mx-auto">
-			<div className="min-h-[60vh]">
+		<div className="container mx-auto bg-cover bg-center min-h-screen" style={{ backgroundImage: 'url("../public/gctu_image.jpg")' }}>
+			<div className="min-h-[60vh] flex items-center justify-center">
 				<div className="lg:max-w-[24rem] mx-auto">
 					<form
 						className="bg-white dark:bg-neutral-900 rounded-lg border dark:border-neutral-800 p-4"
@@ -146,14 +146,14 @@ export default function Login() {
 						)}
 
 						<label>
-							Email or username
+							SchoolMail
 							<Input
 								{...register("email", {
 									required: true,
 									setValueAs(v) {
 										return v.toLowerCase();
 									},
-								})}
+								})} placeholder="Student ID"
 							/>
 							<small className="text-secondary">Your school email</small>
 						</label>
@@ -162,7 +162,7 @@ export default function Login() {
 							Password
 							<Input
 								type="password"
-								{...register("password", { required: true })}
+								{...register("password", { required: true })} placeholder="Password"
 							/>
 							<small className="text-secondary">
 								Forgot your password?{" "}
