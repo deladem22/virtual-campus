@@ -123,7 +123,7 @@ export default function CreateAccount() {
 	}, [actionData, setError]);
 
 	return (
-		<div className="container mx-auto bg-cover bg-center min-h-screen" style={{ backgroundImage: 'url("/public/gctu_image.jpg")' }}>
+		<div className="container mx-auto bg-cover bg-center min-h-screen" style={{ backgroundImage: 'url("/gctu_image.jpg")' }}>
 			<div className="min-h-[60vh] flex items-center justify-center">
 				<div className="lg:max-w-[24rem] mx-auto">
 					<form
